@@ -383,9 +383,57 @@ var supply = [
     eventId: [],
   },
   {
-    name: 'Battery powered or hand crank AM/FM radio',
+    name: 'Extra set of house keys',
     description:
     category: 'Tech',
+    eventId: [],
+  },
+  {
+    name: 'Extra set of car keys',
+    description:
+    category: 'Tech',
+    eventId: [],
+  },
+  {
+    name: '1 list of important phone numbers',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Birth certificate copy',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Passport copy',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Rental lease or mortgage copy',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Health insurance copy',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Email, banking & necessary internet passwords list',
+    description:
+    category: 'Documents',
+    eventId: [],
+  },
+  {
+    name: 'Credit card, debit card photocopies (front and back of cards)',
+    description:
+    category: 'Documents',
     eventId: [],
   },
 ];
