@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Home = props => {
   return (
@@ -16,7 +17,7 @@ const Home = props => {
           <div className='col s3'></div>
           <div className='input-field col s6'>
             <input id="zip" type="text" className="validate" />
-            <label for="zip">Enter your Zip Code</label>
+            <label htmlFor="zip">Enter your Zip Code</label>
           </div>
           <div className='col s3'></div>
         </form>
