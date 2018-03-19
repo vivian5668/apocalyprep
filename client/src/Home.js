@@ -1,7 +1,8 @@
 import React from 'react';
 
-export const Home = props => {
+const Home = props => {
   return (
+
     <div className='row'>
       <div className='row'>
         <div className='col s2'></div>
@@ -20,6 +21,8 @@ export const Home = props => {
           <div className='col s3'></div>
         </form>
       </div>
-    </div>
+   </div>
   )
 }
+
+export default Home
