@@ -6,6 +6,11 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
+import { 
+           BrowserRouter as Router,
+           Route,
+           Link 
+        } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -89,16 +94,32 @@ class App extends Component {
     let theUser = this.state.user || this.state.googleUser
     if (theUser) {
       return (
-        <div>
-          <UserProfile user={theUser} logout={this.logout} />
-        </div>
+        <Router>
+            <div>
+              <nav>
+                  <Link to='/'>Home Page</Link> {' '}
+                  <Link to='/location'>location</Link>{' '}
+              </nav>
+              <Route exact path = '/' component={Home} />
+              <Route path = '/location' component={Location} />
+              <UserProfile user={theUser} logout={this.logout} />
+            </div>
+        </Router>
       )
     } else {
       return (
-        <div className="App">
-          <Signup liftToken={this.liftTokenToState} />
-          <Login liftToken={this.liftTokenToState} />
-        </div>
+        <Router>
+            <div className="App">
+              <nav>
+                  <Link to='/'>Home Page</Link> {' '}
+                  <Link to='/location'>location</Link>{' '}
+              </nav>
+              <Route exact path = '/' component={Home} />
+              <Route path = '/location' component={Location} />
+              <Signup liftToken={this.liftTokenToState} />
+              <Login liftToken={this.liftTokenToState} />
+            </div>
+        </Router>
       )
     }
   }

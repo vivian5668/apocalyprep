@@ -1,10 +1,12 @@
 import React from 'react';
 
-export const Home = props => {
+const Home = props => {
   return (
     <div>
-      <p>Home!</p>
+      <h3>Home!</h3>
 
     </div>
   )
 }
+
+export default Home
