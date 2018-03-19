@@ -1,7 +1,10 @@
 import { ADD_ITEM } from "../constants/action-types";
 
 const initialState = {
-  items: []
+  items: [],
+  token: '',
+  user: null,
+  googleUser: null
 }
 
 

@@ -3,8 +3,8 @@ import { ADD_ITEM } from "../constants/action-types";
 
 // actions are objs, build an action with a simple function that takes 1 parameter
 //it returns a new ready to dispatch action obj with a "type" and "payload"
- export const addArticle = article => (
-  { type: ADD_ITEM, payload: article }
+ export const addItem = item => (
+  { type: ADD_ITEM, payload: item }
 )
 
 
