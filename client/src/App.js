@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Signup from './Signup';
+import Home from './Home';
+import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
