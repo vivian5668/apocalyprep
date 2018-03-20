@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from "./actions/index";
+import { liftTokenToState } from './actions/index';
+import { logout } from './actions/index';
+
+import axios from 'axios';
+
+
 
 const mapDispatchToProps = dispatch => { //dispatch here is a function
   //this is a closure, it returns on object, it has a property addArticle
@@ -8,10 +14,22 @@ const mapDispatchToProps = dispatch => { //dispatch here is a function
   //this is a programming techinique, a func takes multiple parameters
   //now it is reduced to one
   return {
-    addItem: item => dispatch(addItem(item))
+    addItem: item => dispatch(addItem(item)),
+    liftTokenToState: (token, user) => dispatch(liftTokenToState(token, user)),
+    logout: () => dispatch(logout()),
+
   }
 }
 
+
+const mapStateToProps = state => {
+  return {
+    items: state.items,
+    token: state.token,
+    user: state.user,
+    googleUser: state.googleUser
+  }
+}
 
 class ConnectedHome extends Component {
   //this is a local state, we don't have to use it

@@ -27,6 +27,7 @@ class Signup extends Component {
   }
 
   handleSubmit(e) {
+    console.log("We are in handleSubmit...")
     e.preventDefault()
     axios.post('/auth/signup', {
       name: this.state.name,

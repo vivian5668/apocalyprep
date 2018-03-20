@@ -66,10 +66,14 @@ router.post('/me/from/token', (req, res, next) => {
   // Check for presence of a token
   var token = req.body.token
   if (!token) {
+    console.log('no token here')
     res.status(401).json({message: "Must pass the token"})
   } else {
     jwt.verify(token, process.env.JWT_SECRET, function(err, user) {
+      console.log('inside function verify')
+      console.log(token)
       if (err) {
+        console.log('err is: ' + err)
         res.status(401).send(err)
       } else {
         // TODO: Why does the "_id" need to be in quotes?
@@ -77,8 +81,10 @@ router.post('/me/from/token', (req, res, next) => {
           '_id': user._id
         }, function(err, user) {
           if (err) {
+            console.log('err in finding user by ID: ' + err)
             res.status(401).send(err)
           } else {
+            console.log('token is: ' + token)
             res.json({user, token})
           }
         })
