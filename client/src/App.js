@@ -6,38 +6,69 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
+
+import { removeToken } from './actions/index';
+import { liftTokenToState } from './actions/index';
+import { setGoogleUser } from './actions/index';
+import { removeGoogleUser } from './actions/index';
+import { logout } from './actions/index';
+
+
 import { 
            BrowserRouter as Router,
            Route,
            Link 
         } from 'react-router-dom';
 
-class App extends Component {
+import { connect } from 'react-redux';
+
+const mapDispatchToProps = dispatch => { 
+  return {
+    removeToken: () => dispatch(removeToken()),
+    liftTokenToState: (data) => dispatch(liftTokenToState(data)),
+    setGoogleUser: (googleUser) => dispatch(setGoogleUser(googleUser)),
+    removeGoogleUser: () => dispatch(removeGoogleUser()),
+    logout: () => dispatch(logout())
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    items: state.items,
+    token: state.token,
+    user: state.user,
+    googleUser: state.googleUser
+  }
+}        
+
+class ConnectedApp extends Component {
   constructor(props) {
     super()
-    this.state = {
-      token: '',
-      user: null,
-      googleUser: null
-    }
-    this.liftTokenToState = this.liftTokenToState.bind(this)
-    this.logout = this.logout.bind(this)
-    this.checkForLocalToken = this.checkForLocalToken.bind(this)
-    this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
+  //   this.state = {
+  //     token: '',
+  //     user: null,
+  //     googleUser: null
+  //   }
+  //   this.liftTokenToState = this.liftTokenToState.bind(this)
+  //   this.logout = this.logout.bind(this)
+  //   this.checkForLocalToken = this.checkForLocalToken.bind(this)
+  //   this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
   }
 
-  liftTokenToState(data) {
-    console.log("THIS LIFTS TOKEN TO STATE")
-    this.setState({
-      token: data.token,
-      user: data.user
-    })
-  }
+
+  // liftTokenToState(data) {
+  //   console.log("THIS LIFTS TOKEN TO STATE")
+  //   this.setState({
+  //     token: data.token,
+  //     user: data.user
+  //   })
+  // }
 
   logout() {
     console.log("Logging out")
     localStorage.removeItem('mernToken')
-    this.setState({token: '', user: null, googleUser: null})
+    
+    this.props.logout();
     axios.get('/auth/logout', result => console.log(result))
   }
 
@@ -45,19 +76,15 @@ class App extends Component {
     var token = localStorage.getItem('mernToken')
     if (token === 'undefined' || token === null || token === '' || token === undefined) {
       localStorage.removeItem('mernToken')
-      this.setState({
-        token: '',
-        user: {}
-      })
+      this.props.removeToken();
     } else {
       axios.post('/auth/me/from/token', {
         token: token
       }).then( result => {
-        localStorage.setItem('mernToken', result.data.token)
-        this.setState({
-          token: result.data.token,
-          user: result.data.user
-        })
+        localStorage.setItem('mernToken', result.data.token);
+        console.log("this is the token and user:")
+        console.log(result.data)
+        this.props.liftTokenToState(result.data);
       }).catch( err => console.log(err) )
     }
   }
@@ -70,14 +97,12 @@ class App extends Component {
           googleId: response.data.user.googleId,
           displayName: response.data.user.displayName
         }
-        this.setState({
-          googleUser
-        })
+
+        this.props.setGoogleUser(googleUser);
+
       } else {
         // we did not find a google user!
-        this.setState({
-          googleUser: null
-        })
+       this.props.removeGoogleUser();
       }
     })
   }
@@ -91,7 +116,8 @@ class App extends Component {
   // or, if no logged in user exists send them to the signup/Login
   // can only accept user token OR user google NOT both
   render() {
-    let theUser = this.state.user || this.state.googleUser
+    console.log(this.props)
+    let theUser = this.props.user || this.props.googleUser
     if (theUser) {
       return (
         <Router>
@@ -102,7 +128,7 @@ class App extends Component {
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
-              <UserProfile user={theUser} logout={this.logout} />
+              <UserProfile user={theUser} logout={this.props.logout} />
             </div>
         </Router>
       )
@@ -116,13 +142,15 @@ class App extends Component {
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
-              <Signup liftToken={this.liftTokenToState} />
-              <Login liftToken={this.liftTokenToState} />
+              <Signup liftToken={this.props.liftTokenToState} />
+              <Login liftToken={this.props.liftTokenToState} />
             </div>
         </Router>
       )
     }
   }
 }
+
+const App = connect(mapStateToProps, mapDispatchToProps)(ConnectedApp)
 
 export default App;
