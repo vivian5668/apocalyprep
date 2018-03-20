@@ -44,6 +44,7 @@ class ConnectedHome extends Component {
   render() {
     return (
     <div className='row'>
+    
       <div className='row'>
         <div className='col s2'></div>
         <div className='col s8'>
