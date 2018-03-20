@@ -12,17 +12,18 @@ import { liftTokenToState } from './actions/index';
 import { setGoogleUser } from './actions/index';
 import { removeGoogleUser } from './actions/index';
 import { logout } from './actions/index';
+import { RaisedButton } from 'material-ui';
 
 
-import { 
+import {
            BrowserRouter as Router,
            Route,
-           Link 
+           Link
         } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-const mapDispatchToProps = dispatch => { 
+const mapDispatchToProps = dispatch => {
   return {
     removeToken: () => dispatch(removeToken()),
     liftTokenToState: (data) => dispatch(liftTokenToState(data)),
@@ -39,7 +40,7 @@ const mapStateToProps = state => {
     user: state.user,
     googleUser: state.googleUser
   }
-}        
+}
 
 class ConnectedApp extends Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class ConnectedApp extends Component {
   logout() {
     console.log("Logging out")
     localStorage.removeItem('mernToken')
-    
+
     this.props.logout();
     axios.get('/auth/logout', result => console.log(result))
   }
@@ -144,6 +145,7 @@ class ConnectedApp extends Component {
               <Route path = '/location' component={Location} />
               <Signup liftToken={this.props.liftTokenToState} />
               <Login liftToken={this.props.liftTokenToState} />
+              <RaisedButton>Hi</RaisedButton>
             </div>
         </Router>
       )

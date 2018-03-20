@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { TextField } from 'material-ui';
 
 class Login extends Component {
   constructor(props) {
@@ -37,7 +38,12 @@ class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+        <TextField
+          floatingLabelText="Password"
+          type="password"
+          value={this.state.password}
+          onChange={this.handlePasswordChange}
+        /><br />
         <input type='submit' value='Log In!' />
         <a href="/auth/google">Sign In wcith Google!</a>
       </form>
