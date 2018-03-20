@@ -6,20 +6,24 @@ export const UserProfile = props => {
   return (
     <div>
       <div>
-        
-      </div>
-      <div>
-        <Row>
-          <Col xs={6} md={3}>
-                Hello, world!
-          </Col>
-          <Col xs={6} md={3}>
-                Hello, world!
-          </Col>
-          <Col xs={6} md={3}>
-                Hello, world!
-          </Col>
-        </Row>
+        <Grid fluid>
+          <Row>
+            <Col className="grey" sm={4}>
+
+                  <Col sm={12}> <h2>Detroit, MI</h2> </Col>
+                  <Col sm={12}> <h2>FIRE</h2> </Col>
+                  <Col sm={12}> <h2>YOUTHS</h2> </Col>
+                  <Col sm={12}> <h2>BUNNIES</h2> </Col>
+                  <Col sm={12}> <h2>DINOSAURS</h2> </Col>
+            </Col>
+            <Col sm={4}>
+                  Hello, world!
+            </Col>
+            <Col sm={4}>
+                  Hello, world!
+            </Col>
+          </Row>
+        </Grid>
       </div>
     </div>
   )
