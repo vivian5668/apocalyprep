@@ -140,11 +140,16 @@ class ConnectedApp extends Component {
               <nav>
                   <Link to='/'>Home Page</Link> {' '}
                   <Link to='/location'>location</Link>{' '}
+                  <Link to='/user'>User</Link>{' '}
+                  <Link to='/login'>Login</Link>{' '}
+                  <Link to='/signup'>Signup</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
-              <Signup liftToken={this.props.liftTokenToState} />
-              <Login liftToken={this.props.liftTokenToState} />
+              <Route path = '/user' component={UserProfile} />
+              <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
+              <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
+
               <RaisedButton>Hi</RaisedButton>
             </div>
         </Router>

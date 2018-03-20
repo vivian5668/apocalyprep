@@ -1,4 +1,8 @@
 .App {
   text-align: center;
-  background-color: #212121;
+
+}
+
+.col-grey {
+  background-color: grey;
 }

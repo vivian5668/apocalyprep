@@ -1,10 +1,26 @@
 import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
 
 export const UserProfile = props => {
   return (
     <div>
-      <p>Hello, {props.user.name}!</p>
-      <a onClick={props.logout}>Log Out!</a>
+      <div>
+        
+      </div>
+      <div>
+        <Row>
+          <Col xs={6} md={3}>
+                Hello, world!
+          </Col>
+          <Col xs={6} md={3}>
+                Hello, world!
+          </Col>
+          <Col xs={6} md={3}>
+                Hello, world!
+          </Col>
+        </Row>
+      </div>
     </div>
   )
 }
