@@ -1,4 +1,55 @@
 .App {
   text-align: center;
-  background-color: #212121;
+
+  font-family: 'Raleway', sans-serif;
+
+
+
+.grey {
+  background-color: grey;
+}
+
+
+body {
+  max-height: 100vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.locationform {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  z-index: 1000;
+  font-size: 20px;
+  color: #000000;
+
+.location-image {
+  max-height: 400px;
+  max-width: 100%;
+
+
+}
+
+.image {
+  max-height: 100%;
+  clip-path: inset(0 0 50% 0);
+}
+
+.location-title {
+  z-index: 10;
+  font-size: 80px;
+  color: white;
+  font-weight: 800;
+  text-align: left;
+  position: absolute;
+
 }
