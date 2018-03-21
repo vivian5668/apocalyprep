@@ -38,7 +38,7 @@ class Location extends Component  {
       )
     }
 
-  }
+  
 }
 
 export default Location;

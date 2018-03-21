@@ -18,7 +18,7 @@ import { unregister as unregisterServiceWorker } from './registerServiceWorker';
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-      <Form />
+      <App/>
     </MuiThemeProvider>
   </Provider>,
    document.getElementById('root'));
