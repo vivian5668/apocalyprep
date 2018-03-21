@@ -3,7 +3,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Location extends Component  {
 
-
   render() {
 
       return (
@@ -34,9 +33,7 @@ class Location extends Component  {
           </Grid>
         </div>
       )
-    }
-
-
+  }
 }
 
 export default Location;

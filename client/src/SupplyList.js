@@ -1,25 +1,42 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import axios from 'axios';
+
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/family-tree');
+mongoose.connect('mongodb://localhost/mernJwtAuth');
 
 
 class Supplylist extends Component  {
 
   constructor() {
-    this.newMedicalArray = [];
-    this.newToolArray = [];
-    this.newTechArray = [];
-    this.newDocArray = [];
+    super();
+    this.state = {
+      allSupply = [],
+      medicalArray = [],
+      toolArray = [],
+      techArray = [],
+      docArray = [],
+    }
   }
 
   componentDidMount() {
+    //call database using Axios. this route is set up in server.js
+    //put all things in 1 big array -- allSupply[]
+    axios.get('/api/supplylist').then(result => {
+    this.setState({
+      //we're getting the data sent from server.js
+      allSupply: result.data
+        })
+      })
 
 
-    //call database
-
-    //get all things back in 1 big array
-
+    let newGamesArray = Array.from(this.state.games)
+      newGamesArray.push(newGame)
+      this.setState({
+        games: newGamesArray,
+        nameVal: '',
+        minVal: '',
+        maxVal: ''
 
     // filter using swich case into 4 new arrays
 
