@@ -4,6 +4,7 @@ import { addItem } from "./actions/index";
 import { liftTokenToState } from './actions/index';
 import { logout } from './actions/index';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import LocationEnter from './LocationEnter';
 
 import axios from 'axios';
 
@@ -48,10 +49,7 @@ class ConnectedHome extends Component {
         <Row center='sm'>
           <Col sm={12}>
             <div className='container'>
-              <form className='locationform'>
-                <input id='location' type='text' />
-                <label htmlFor='location'>Enter city & state</label>
-              </form>
+              <LocationEnter />
               <div className='videowrapper'>
                 <video id='background-video' loop autoPlay>
                   <source src='img/starrySky.mp4' type='video/mp4' />
