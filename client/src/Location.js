@@ -33,7 +33,7 @@ class Location extends Component  {
           </Grid>
         </div>
       )
-  }
+    }
 }
 
 export default Location;
