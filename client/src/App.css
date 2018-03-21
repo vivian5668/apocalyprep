@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
   font-family: 'Raleway', sans-serif;
 }
 
@@ -12,10 +11,14 @@
 
 body {
   max-height: 100vw;
-  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  font-family: 'Raleway', sans-serif;
 }
 
 .container {
+
   object-fit: contain;
   width: auto;
   height: auto;
@@ -25,6 +28,7 @@ body {
 }
 
 .locationform {
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   left: 40%;
   top: 40%;

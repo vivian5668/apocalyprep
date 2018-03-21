@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 /*CSS for image accordion */
@@ -325,4 +324,3 @@ body {
   opacity: 1;
   visibility: visible;
 }
-

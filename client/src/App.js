@@ -9,12 +9,12 @@ import { UserProfile } from './UserProfile';
 import axios from 'axios';
 import Navbar from './Navbar';
 
+
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
 import { setGoogleUser } from './actions/index';
 import { removeGoogleUser } from './actions/index';
 import { logout } from './actions/index';
-import { RaisedButton } from 'material-ui';
 
 
 import {
@@ -127,13 +127,13 @@ class ConnectedApp extends Component {
             <div>
               <nav>
                   <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
+                  <Link to='/location'>My Location</Link>{' '}
                   <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
                   <Link to='/user'>User</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
-              <UserProfile user={theUser} logout={this.props.logout} />
+              <UserProfile user={theUser} logout={this.logout} />
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
             </div>
@@ -147,7 +147,7 @@ class ConnectedApp extends Component {
               <nav>
 
                   <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
+                  <Link to='/location'>My Location</Link>{' '}
                   <Link to='/user'>User</Link>{' '}
                   <Link to='/login'>Login</Link>{' '}
                   <Link to='/signup'>Signup</Link>{' '}
@@ -160,7 +160,6 @@ class ConnectedApp extends Component {
               <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
-              <RaisedButton>Hi</RaisedButton>
             </div>
 
         </Router>
