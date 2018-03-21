@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import axios from 'axios';
-import {Collapsible, Icon} from 'react-materialize'
+import { Collapsible } from 'react-materialize'
 
 
 
