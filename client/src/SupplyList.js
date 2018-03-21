@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import axios from 'axios';
-import {Collapsible, Icon} from 'react-materialize'
-
-
-
+import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
 
 class SupplyList extends Component  {
 
@@ -73,26 +70,59 @@ class SupplyList extends Component  {
   }
 
   render() {
-     // map through the 4 arrays i've built to create li elements
-     var medicalList = this.state.medicalArray.map((item,index) => <li key={index}>{item}</li>)
-     var foodwaterList = this.state.foodwaterArray.map((item,index) => <li key={index}>{item}</li>)
-     var toolList = this.state.toolArray.map((item,index) => <li key={index}>{item}</li>)
-     var techList = this.state.techArray.map((item,index) => <li key={index}>{item}</li>)
-     var docList = this.state.docArray.map((item,index) => <li key={index}>{item}</li>)
+     // map through the 5 arrays i've built to create li elements
+     var medicalList = this.state.medicalArray.map((item,index) =>
+     <li key={index}>
+     <Input name='group1' type='checkbox' value='' label='green' className='filled-in' defaultChecked='checked' />
+     {item}</li>)
+
+     var foodwaterList = this.state.foodwaterArray.map((item,index) =>
+     <li key={index}>
+     <Input name='group1' type='checkbox' value='' label='green' className='filled-in' defaultChecked='checked' />
+     {item}</li>)
+
+     var toolList = this.state.toolArray.map((item,index) =>
+     <li key={index}>
+     <Input name='group1' type='checkbox' value='' label='green' className='filled-in' defaultChecked='checked' />
+     {item}</li>)
+
+     var techList = this.state.techArray.map((item,index) =>
+     <li key={index}>
+     <Input name='group1' type='checkbox' value='' label='green' className='filled-in' defaultChecked='checked' />
+     {item}</li>)
+
+     var docList = this.state.docArray.map((item,index) =>
+     <li key={index}>
+     <Input name='group1' type='checkbox' value='' label='green' className='filled-in' defaultChecked='checked' />
+     {item}</li>)
 
 
       return (
         <div>
-        <h2> Medical</h2>
-          {medicalList}
-          <h2> Food Water</h2>
-            {foodwaterList}
-        <h2> Tool List</h2>
-          {toolList}
-          <h2> Tech </h2>
-            {techList}
-            <h2> Documents </h2>
+
+          <Collapsible accordion className="collapsible-accordion">
+            <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
+              {medicalList}
+            </CollapsibleItem>
+
+            <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
+              {foodwaterList}
+            </CollapsibleItem>
+
+            <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
+              {toolList}
+            </CollapsibleItem>
+
+            <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
+              {techList}
+            </CollapsibleItem>
+
+            <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
               {docList}
+            </CollapsibleItem>
+
+          </Collapsible>
+
         </div>
       )
 
