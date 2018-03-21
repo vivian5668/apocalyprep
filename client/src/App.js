@@ -72,7 +72,7 @@ class ConnectedApp extends Component {
     console.log("Logging out")
     localStorage.removeItem('mernToken')
 
-    this.props.logout();
+    this.props.logoutRedux();
     axios.get('/auth/logout', result => console.log(result))
   }
 
