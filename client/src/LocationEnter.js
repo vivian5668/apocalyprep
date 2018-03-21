@@ -59,11 +59,11 @@ class ConnectedLocationEnter extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='locationform' onSubmit={this.handleSubmit}>
         <label>
           <input type="text" value={this.state.address} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <input className='btn waves-effect grey darken-4 white-text' type="submit" value="Submit" />
       </form>
     );
   }
