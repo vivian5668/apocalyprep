@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class Signup extends Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Signup extends Component {
     this.state = {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      redirect: false
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -39,9 +41,16 @@ class Signup extends Component {
       localStorage.setItem('mernToken', result.data.token)
       this.props.liftToken(result.data)
     })
+    this.setState({
+      redirect: true
+    })
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
+
     return (
       <form onSubmit={this.handleSubmit}>
         Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} /><br />

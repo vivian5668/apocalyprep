@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import {Row, Col} from 'react-materialize';
+import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
     super()
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      redirect: false
     }
     this.handleEmailChange = this.handleEmailChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
@@ -32,9 +34,16 @@ class Login extends Component {
       localStorage.setItem('mernToken', result.data.token)
       this.props.liftToken(result.data)
     }).catch( err => console.log(err) )
-  }
+    this.setState({
+      redirect: true
+    })
+}
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/location' />
+    }
+
     return (
       <Row>
         <Col s={3}></Col>
