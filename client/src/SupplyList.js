@@ -33,10 +33,7 @@ class Supplylist extends Component  {
     let newGamesArray = Array.from(this.state.games)
       newGamesArray.push(newGame)
       this.setState({
-        games: newGamesArray,
-        nameVal: '',
-        minVal: '',
-        maxVal: ''
+      )}
 
     // filter using swich case into 4 new arrays
 
