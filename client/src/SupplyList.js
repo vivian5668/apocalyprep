@@ -1,80 +1,106 @@
-import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import axios from 'axios';
-
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mernJwtAuth');
-
-
-class Supplylist extends Component  {
-
-  constructor() {
-    super();
-    this.state = {
-      allSupply = [],
-      medicalArray = [],
-      toolArray = [],
-      techArray = [],
-      docArray = [],
-    }
-  }
-
-  componentDidMount() {
-    //call database using Axios. this route is set up in server.js
-    //put all things in 1 big array -- allSupply[]
-    axios.get('/api/supplylist').then(result => {
-    this.setState({
-      //we're getting the data sent from server.js
-      allSupply: result.data
-        })
-      })
-
-
-    let newGamesArray = Array.from(this.state.games)
-      newGamesArray.push(newGame)
-      this.setState({
-      )}
-
-    // filter using swich case into 4 new arrays
-
-    // switch(true) (
-    //   case item.category === "Medical":
-    //     newMedicalArray.push(item.name)
-    //   case item.category === "Tools":
-    //     newToolArray.push(item.name)
-    //   case item.category === "Tech":
-    //     newTechArray.push(item.name)
-    //   case item.category === "Documents":
-    //     newDocumentArray.push(item.name)
-    //   )
-    //
-  }
-
-  render() {
-
-    //map through the 4 arrays i've built to create li elements
-        // var newMedicalArray = [];
-        // var newMedicalArray = [];
-        // var newMedicalArray = [];
-        // var newMedicalArray = [];
-
-     var medicalList = newMedicalArray.map((item,index) => <li key={index}>{item}</li>)
-
-      return (
-        <div>
-          <Grid fluid>
-            <Row>
-              <Col className="grey" sm={4}>
-                <Col sm={12}>{medicalList}</Col>
-              <Col className="grey" sm={4}>
-                <Col sm={12}>{medicalList}</Col>
-            </Row>
-          </Grid>
-        </div>
-      )
-    }
-
-  }
-}
-
-export default Supplylist;
+// import React, { Component } from 'react';
+// import { Grid, Row, Col } from 'react-flexbox-grid';
+// import axios from 'axios';
+// import {Collapsible, Icon} from 'react-materialize'
+//
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/mernJwtAuth');
+//
+// //map through the 4 arrays i've built to create li elements
+//  // var medicalList = medicalArray.map((item,index) => <li key={index}>{item}</li>)
+//  // var foodwaterList = foodwaterArray.map((item,index) => <li key={index}>{item}</li>)
+//  // var toolList = toolArray.map((item,index) => <li key={index}>{item}</li>)
+//  // var techList = techArray.map((item,index) => <li key={index}>{item}</li>)
+//  // var docList = docArray.map((item,index) => <li key={index}>{item}</li>)
+//
+//  // <Collapsible accordion>
+//  //
+//  //   <CollapsibleItem header='Medical' icon='filter_drama'>
+//  //
+//  //   </CollapsibleItem>
+//  //
+//  //   <CollapsibleItem header='Food & Water' icon='place'>
+//  //
+//  //   </CollapsibleItem>
+//  //
+//  //   <CollapsibleItem header='Tools & Supplies' icon='whatshot'>
+//  //
+//  //   </CollapsibleItem>
+//  //
+//  //   <CollapsibleItem header='Tech' icon='whatshot'>
+//  //
+//  //   </CollapsibleItem>
+//  //
+//  //   <CollapsibleItem header='Documents' icon='whatshot'>
+//  //
+//  //   </CollapsibleItem>
+//  //
+//  // </Collapsible>
+//
+// class SupplyList extends Component  {
+//
+//   constructor() {
+//     super();
+//     this.state = {
+//       allSupply: [],
+//       medicalArray: [],
+//       foodwaterArray: [],
+//       toolArray: [],
+//       techArray: [],
+//       docArray: [],
+//     }
+//   }
+//
+//   componentDidMount() {
+//     //call database using Axios. this route is set up in server.js
+//     //put all things in 1 big array -- allSupply[]
+//     axios.get('/api/supplylist').then(result => {
+//     this.setState({
+//       //we're getting the data sent from server.js
+//       allSupply: result.data
+//       })
+//
+//     })
+//     console.log(allSupply);
+//
+//     // filter using swich case into 4 new arrays
+//     // filterSupply(allSupply) {
+//     //   switch(true) {
+//     //     case item.category = "Medical":
+//     //       medicalArray.push(item.name)
+//     //       break;
+//     //     case item.category = "Food and Water":
+//     //       foodwaterArray.push(item.name)
+//     //       break;
+//     //     case item.category = "Tools and Supplies":
+//     //       toolArray.push(item.name)
+//     //       break;
+//     //     case item.category = "Tech":
+//     //       techArray.push(item.name)
+//     //       break;
+//     //     case item.category = "Documents":
+//     //       docArray.push(item.name)
+//     //       break;
+//     //     default:
+//     //       return 'foo';
+//     //   }
+//     // }
+//
+//   }
+//
+//   render() {
+//
+//
+//
+//       return (
+//         <div>
+//           <Row>
+//
+//           </Row>
+//         </div>
+//       )
+//     }
+//   }
+//
+//
+// export default Supplylist;
