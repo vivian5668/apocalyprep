@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Signup from './Signup';
 import Home from './Home';
+import ImageAccordion from './ImageAccordion';
 import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
@@ -126,10 +127,13 @@ class ConnectedApp extends Component {
               <nav>
                   <Link to='/'>Home Page</Link> {' '}
                   <Link to='/location'>location</Link>{' '}
+                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
               <UserProfile user={theUser} logout={this.props.logout} />
+              <Route path = '/ImageAccordion' component={ImageAccordion} />
+
             </div>
         </Router>
       )
@@ -138,17 +142,20 @@ class ConnectedApp extends Component {
         <Router>
             <div className="App">
               <nav>
+
                   <Link to='/'>Home Page</Link> {' '}
                   <Link to='/location'>location</Link>{' '}
                   <Link to='/user'>User</Link>{' '}
                   <Link to='/login'>Login</Link>{' '}
                   <Link to='/signup'>Signup</Link>{' '}
+                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
               <Route path = '/user' component={UserProfile} />
               <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
               <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
+              <Route path = '/ImageAccordion' component={ImageAccordion} />
 
               <RaisedButton>Hi</RaisedButton>
             </div>

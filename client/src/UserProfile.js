@@ -5,14 +5,17 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 export const UserProfile = props => {
   return (
       <div>
-        <Grid fluid>
-          <Row>
-
-            <div>
+         <div>
               <h2>Login and Logout!</h2>
               <p>Hello, {props.user}!</p>
               <button onClick={props.logout}>Log Out!</button>
             </div>
+        <Grid fluid>
+          <Row>
+
+
+           
+
 
             <Col className="grey" sm={4}>
                   <Col sm={12}> <h2>Detroit, MI</h2> </Col>
