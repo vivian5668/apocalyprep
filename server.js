@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/passportConfig');
 
+//model for supply list - this is populated into the database from the seeder file supply.js
+var Supply = require('./models/supply');
+
 // Mongoose stuff
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mernJwtAuth');
@@ -37,6 +40,23 @@ app.use(function(req, res, next) {
 });
 
 app.use('/auth', auth);
+
+// Get all supply list data from database, will pass on to supplylist.js component
+app.get('/api/supplylist', (req, res) => {
+  console.log("You've hit the API to find all supplies");
+  // Find all supplies
+  Supply.find({}, function(err, supplylist) {
+    if (err) {
+      console.log("There was a db error");
+      res.send(err);
+    } else {
+      console.log("Got supplylist from DB!")
+      // This is the raw array of supply list objects
+      res.send(supplylist);
+    }
+  });
+});
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
