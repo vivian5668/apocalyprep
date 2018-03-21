@@ -7,6 +7,7 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -128,6 +129,7 @@ class ConnectedApp extends Component {
                   <Link to='/'>Home Page</Link> {' '}
                   <Link to='/location'>location</Link>{' '}
                   <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
+                  <Link to='/user'>User</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
@@ -135,6 +137,7 @@ class ConnectedApp extends Component {
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
             </div>
+
         </Router>
       )
     } else {
@@ -159,6 +162,7 @@ class ConnectedApp extends Component {
 
               <RaisedButton>Hi</RaisedButton>
             </div>
+
         </Router>
       )
     }
