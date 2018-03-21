@@ -15,6 +15,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
 .container {
   object-fit: contain;
   width: auto;
@@ -51,4 +52,8 @@ body {
   text-align: left;
   position: absolute;
 
+}
+
+.collapsible-accordion {
+  text-align: left !important;
 }
