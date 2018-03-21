@@ -1,8 +1,30 @@
 .App {
   text-align: center;
-
 }
 
 .grey {
   background-color: grey;
+}
+
+body {
+  max-height: 100vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.locationform {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  z-index: 1000;
+  font-size: 20px;
+  color: #000000;
 }
