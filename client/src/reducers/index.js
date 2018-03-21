@@ -11,7 +11,10 @@ const initialState = {
   items: [],
   token: '',
   user: null,
-  googleUser: null
+  googleUser: null,
+  // address: '',   // lowercase city and state *mah
+  point: '',      // lat and long location *mah
+  alert: null    // object containing the alert data
 }
 
 
@@ -45,16 +48,3 @@ const rootReducer = (state = initialState, action) => {
 
 
 export default rootReducer
-
-
-
-
-
-
-
-
-
-
-
-
-

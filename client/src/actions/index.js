@@ -4,7 +4,7 @@ import { LOGOUT } from "../constants/action-types";
 import { REMOVE_TOKEN} from "../constants/action-types";
 import { SET_GOOGLE_USER} from "../constants/action-types";
 import { REMOVE_GOOGLE_USER} from "../constants/action-types";
-
+import { SET_POINT } from "../constants/action-types";
 
 
 // actions are objs, build an action with a simple function that takes 1 parameter
@@ -33,15 +33,17 @@ export const removeGoogleUser = () => (
   { type: REMOVE_GOOGLE_USER, payload: null }
 )
 
-
+export const setPoint = (point) => (
+  { type: SET_POINT, payload: point }
+)
 // Notes on actions
- 
+
 // The only way to change state is to send a signal to the Store
 // dispatching that action is the process of sending that signal
 
 // Actions are objects
 
-// ex: 
+// ex:
 
 // {
 //  type: 'ACTION_HERE',

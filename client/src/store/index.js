@@ -7,7 +7,10 @@ const initialState = {
   items: [],
   token: '',
   user: null,
-  googleUser: null
+  googleUser: null,
+  // address: '',   // lowercase city and state *mah
+  point: '',      // lat and long location *mah
+  alert: null    // object containing the alert data
 }
 
 const store = createStore(rootReducer, /* Our reducers */
@@ -33,6 +36,6 @@ export default store;
 
 //store.dispatch( addArticle( {title: 'article', id:1 }))
 
-//store.subscribe() ---listens for store updates, takes a callback 
+//store.subscribe() ---listens for store updates, takes a callback
 //that does sth when store is updated
 //store.subscribe(() => {console.log('redux is happening')})
