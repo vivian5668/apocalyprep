@@ -17,6 +17,7 @@ nav {
   font-family: 'Raleway', sans-serif;
 }
 
+
 .container {
 
   object-fit: contain;
@@ -55,4 +56,8 @@ nav {
   text-align: left;
   position: absolute;
 
+}
+
+.collapsible-accordion {
+  text-align: left !important;
 }

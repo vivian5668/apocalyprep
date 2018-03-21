@@ -294,13 +294,18 @@ var things = [
   },
 ];
 
-things.forEach(thing => {
-  console.log("adding a thing...")
+things.forEach(function(thing) {
+  console.log("Trying to add a thing...")
+  console.log(thing.name)
+  console.log(thing.category)
   Supply.create(
     {
       name: thing.name,
       category: thing.category
-    }, (err, supply) => {
+    }, function(err, supply) {
+      console.log("Here are the results")
+      console.log(err)
+      console.log(supply)
       if (err) {
         console.log('error!', err);
       } else {
@@ -310,4 +315,4 @@ things.forEach(thing => {
   )
 });
 
-process.exit();
+// process.exit();

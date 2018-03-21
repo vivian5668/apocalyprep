@@ -38,49 +38,6 @@ body {
   margin-top: 15px;
 }
 
-.link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 800px;
-  margin: 30px auto 0;
-}
-.link a {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 40px;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-.link a:hover {
-  color: #CA9CE1;
-}
-.link a:last-child {
-  margin-right: 0;
-}
-.link a i {
-  color: #CA9CE1;
-  margin-right: 9px;
-  font-size: 30px;
-}
 
 .slider-containers {
   width: 100%;
@@ -188,97 +145,52 @@ body {
   visibility: visible;
 }
 
-/* effect 2 styles */
-.flexbox-slider.flexbox-slider-2 .flexbox-slide .text-block {
-  left: -60px;
-}
-.flexbox-slider.flexbox-slider-2:hover .flexbox-slide:not(:hover):after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+.verticalText {
+  position: absolute;
+  text-align: left;
+  /*left: 10px;*/
+  top: 30px;
+  z-index: 4;
+  /*visibility: hidden;*/
   opacity: 1;
-}
-.flexbox-slider.flexbox-slider-2:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
-          transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  left: 30px;
-  opacity: 1;
-  visibility: visible;
+
+  color: white;
+  font-size: 50px;
+  transform: rotate(90deg);
+  font-weight: bold;
 }
 
-/* effect 3 styles */
-.flexbox-slider.flexbox-slider-3 .flexbox-slide:after {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-.flexbox-slider.flexbox-slider-3 .flexbox-slide .text-block {
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-}
-.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover:after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.verticalText-Hurricane {
+  position: absolute;
+  text-align: left;
+  /*left: 10px;*/
+  top: 50px;
+  z-index: 4;
+  /*visibility: hidden;*/
   opacity: 1;
-  visibility: visible;
-}
-.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  opacity: 1;
-  visibility: visible;
+
+  color: white;
+  font-size: 50px;
+  transform: rotate(90deg);
+  font-weight: bold;
 }
 
-/* effect 4 styles */
-.flexbox-slider.flexbox-slider-4 .flexbox-slide:after {
-  top: -100%;
-}
-.flexbox-slider.flexbox-slider-4 .flexbox-slide .text-block {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:not(:hover):after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  top: 0;
+.verticalText-Earthquake {
+  position: absolute;
+  text-align: left;
+  left: -40px;
+  top: 70px;
+  z-index: 4;
+  /*visibility: hidden;*/
   opacity: 1;
-  visibility: visible;
+
+  color: white;
+  font-size: 50px;
+  transform: rotate(90deg);
+  font-weight: bold;
 }
-.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:hover .text-block {
+
+.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .verticalText {
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.2s;
@@ -287,40 +199,32 @@ body {
           transition-timing-function: linear;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
-/* effect 5 styles */
-.flexbox-slider.flexbox-slider-5 .flexbox-slide .text-block {
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-}
-.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover .text-block {
+.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .verticalText-Earthquake {
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  -webkit-transition-delay: 0.7s;
-          transition-delay: 0.7s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
-.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover:after {
+
+.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .verticalText-Hurricane {
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  opacity: 1;
-  visibility: visible;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
