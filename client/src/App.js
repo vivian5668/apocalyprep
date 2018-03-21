@@ -7,7 +7,7 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
-import Navbar from './Navbar';
+import Nav from './Nav';
 
 
 import { removeToken } from './actions/index';
@@ -52,10 +52,10 @@ class ConnectedApp extends Component {
   //     user: null,
   //     googleUser: null
   //   }
-  //   this.liftTokenToState = this.liftTokenToState.bind(this)
-  //   this.logout = this.logout.bind(this)
-  //   this.checkForLocalToken = this.checkForLocalToken.bind(this)
-  //   this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
+    // this.liftTokenToState = this.liftTokenToState.bind(this)
+    this.logout = this.logout.bind(this)
+    this.checkForLocalToken = this.checkForLocalToken.bind(this)
+    this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
   }
 
 
@@ -121,50 +121,22 @@ class ConnectedApp extends Component {
   render() {
     console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
-    if (theUser) {
-      return (
-        <Router>
-            <div>
-              <nav>
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>My Location</Link>{' '}
-                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
-                  <Link to='/user'>User</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/location' component={Location} />
-              <UserProfile user={theUser} logout={this.logout} />
-              <Route path = '/ImageAccordion' component={ImageAccordion} />
+    return (
+      <div>
+      <Router>
+        <div>
+          <Nav user={theUser} logout={this.props.logout}/>
+          <Route exact path = '/' component={Home} />
+          <Route path = '/location' component={Location} />
+          <Route path = '/user' component={UserProfile} />
+          <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
+          <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
+          <Route path = '/ImageAccordion' component={ImageAccordion} />
+        </div>
+      </Router>
 
-            </div>
-
-        </Router>
-      )
-    } else {
-      return (
-        <Router>
-            <div className="App">
-              <nav>
-
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>My Location</Link>{' '}
-                  <Link to='/user'>User</Link>{' '}
-                  <Link to='/login'>Login</Link>{' '}
-                  <Link to='/signup'>Signup</Link>{' '}
-                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/location' component={Location} />
-              <Route path = '/user' component={UserProfile} />
-              <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
-              <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
-              <Route path = '/ImageAccordion' component={ImageAccordion} />
-
-            </div>
-
-        </Router>
-      )
-    }
+    </div>
+    )
   }
 }
 
