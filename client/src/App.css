@@ -11,26 +11,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.videorow {
-  max-height: 100vw;
-  max-width: 100%;
-}
-
-.videocolumn {
+.container {
   object-fit: contain;
   width: auto;
   height: auto;
   position: relative;
-  z-index: -10;
   background-size: cover;
   overflow: hidden;
 }
 
-.locationForm {
-  position: relative;
-  /* margin-left: 45vw;
-  margin-top: 20vw; */
+.locationform {
+  position: absolute;
+  left: 40%;
+  top: 40%;
   z-index: 1000;
   font-size: 20px;
-  color: #FFF;
+  color: #000000;
 }

@@ -6,6 +6,7 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -122,36 +123,36 @@ class ConnectedApp extends Component {
     if (theUser) {
       return (
         <Router>
-            <div>
-              <nav>
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/location' component={Location} />
-              <UserProfile user={theUser} logout={this.props.logout} />
-            </div>
+          <div>
+            <nav>
+              <Navbar />
+              <Link to='/'>Home Page</Link> {' '}
+              <Link to='/location'>My Location</Link>{' '}
+              <Link to='/user'>User</Link>{' '}
+            </nav>
+            <Route exact path = '/' component={Home} />
+            <Route path = '/location' component={Location} />
+          </div>
         </Router>
       )
     } else {
       return (
         <Router>
-            <div className="App">
-              <nav>
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
-                  <Link to='/user'>User</Link>{' '}
-                  <Link to='/login'>Login</Link>{' '}
-                  <Link to='/signup'>Signup</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/location' component={Location} />
-              <Route path = '/user' component={UserProfile} />
-              <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
-              <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
-
-              <RaisedButton>Hi</RaisedButton>
-            </div>
+          <div className="App">
+            <nav>
+              <Navbar />
+              <Link to='/'>Home Page</Link> {' '}
+              <Link to='/location'>My Location</Link>{' '}
+              <Link to='/user'>User</Link>{' '}
+              <Link to='/login'>Login</Link>{' '}
+              <Link to='/signup'>Signup</Link>{' '}
+            </nav>
+            <Route exact path = '/' component={Home} />
+            <Route path = '/location' component={Location} />
+            <Route path = '/user' component={UserProfile} />
+            <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
+            <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
+          </div>
         </Router>
       )
     }

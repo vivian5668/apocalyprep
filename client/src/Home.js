@@ -45,16 +45,18 @@ class ConnectedHome extends Component {
   render() {
     return (
       <Grid fluid>
-        <Row center='sm' className='videorow'>
-          <Col className='header-text videocolumn' sm={12}>
-            <form className='locationForm'>
-              <input id='location' type='text' />
-              <label htmlFor='location'>Enter city & state</label>
-            </form>
-            <div className='videowrapper'>
-              <video id='background-video' loop autoPlay>
-                <source src='img/starrySky.mp4' type='video/mp4' />
-              </video>
+        <Row center='sm'>
+          <Col sm={12}>
+            <div className='container'>
+              <form className='locationform'>
+                <input id='location' type='text' />
+                <label htmlFor='location'>Enter city & state</label>
+              </form>
+              <div className='videowrapper'>
+                <video id='background-video' loop autoPlay>
+                  <source src='img/starrySky.mp4' type='video/mp4' />
+                </video>
+              </div>
             </div>
           </Col>
         </Row>
