@@ -1,15 +1,16 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/family-tree');
 
 
 class Supplylist extends Component  {
 
   constructor() {
-    // this.newMedicalArray = [];
-    // this.newToolArray = [];
-    // this.newTechArray = [];
-    // this.newDocArray = [];
+    this.newMedicalArray = [];
+    this.newToolArray = [];
+    this.newTechArray = [];
+    this.newDocArray = [];
   }
 
   componentDidMount() {

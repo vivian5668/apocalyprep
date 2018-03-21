@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
-
 
 class Location extends Component  {
 
@@ -38,7 +36,7 @@ class Location extends Component  {
       )
     }
 
-  }
+
 }
 
 export default Location;
