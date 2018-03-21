@@ -7,14 +7,14 @@ export const UserProfile = props => {
       <div>
          <div>
               <h2>Login and Logout!</h2>
-              <p>Hello, {props.user}!</p>
+              <p>Hello, {props.user.name}!</p>
               <button onClick={props.logout}>Log Out!</button>
             </div>
         <Grid fluid>
           <Row>
 
 
-           
+
 
 
             <Col className="grey" sm={4}>

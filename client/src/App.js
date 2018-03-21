@@ -134,7 +134,7 @@ class ConnectedApp extends Component {
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
-              <UserProfile user={theUser} logout={this.props.logout} />
+              <UserProfile user={theUser} logout={this.logout} />
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
             </div>
