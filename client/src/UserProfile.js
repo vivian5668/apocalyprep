@@ -9,7 +9,6 @@ export const UserProfile = props => {
         <Grid fluid>
           <Row>
             <Col className="grey" sm={4}>
-
                   <Col sm={12}> <h2>Detroit, MI</h2> </Col>
                   <Col sm={12}> <h2>FIRE</h2> </Col>
                   <Col sm={12}> <h2>YOUTHS</h2> </Col>
