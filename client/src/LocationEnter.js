@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Geocode from "react-geocode";
 import { setPoint } from './actions/index';
+import { setAlerts } from './actions/index';
+import  { Redirect } from 'react-router-dom';
+import axios from 'axios';
+
 
 const mapDispatchToProps = dispatch => { //dispatch here is a function
   //this is a closure, it returns on object, it has a property addArticle
@@ -10,13 +14,16 @@ const mapDispatchToProps = dispatch => { //dispatch here is a function
   //now it is reduced to one
   return {
     setPoint: (point) => dispatch(setPoint(point)),
+    setAlerts: (alerts) => dispatch(setAlerts(alerts))
   }
 }
 
 
 const mapStateToProps = state => {
+  console.log('map state 2 prop', state.point)
   return {
-    point: state.point
+    point: state.point,
+    alerts: state.alerts
   }
 }
 
@@ -26,6 +33,7 @@ class ConnectedLocationEnter extends Component {
     this.state = {
       address: '',
       // point: ''
+      redirect: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,26 +57,44 @@ class ConnectedLocationEnter extends Component {
          // })
          // console.log(response.results[0].geometry.location)
          // console.log(lat,lng);
-         console.log(point)
+         console.log('AFTER SET POINT', this.props.point)
        },
        error => {
          console.error(error);
        }
-     );
+     ).then(() => {
+       axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
+         this.props.setAlerts(result)
+         console.log(result)
+       })
+     }). then(() => {
+       this.setState({
+         redirect: true
+       })
+     })
+
+
   }
 
+  // getstate = () => {
+  //   console.log(this.props.point)
+  // }
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/ImageAccordion'  />
+    }
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='locationform' onSubmit={this.handleSubmit} >
         <label>
           <input type="text" value={this.state.address} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <input className='btn waves-effect grey darken-4 white-text' type="submit" value="Submit" />
       </form>
     );
   }
 }
 
-const LocationEnter = connect(null, mapDispatchToProps)(ConnectedLocationEnter)
+const LocationEnter = connect(mapStateToProps, mapDispatchToProps)(ConnectedLocationEnter)
 
 export default LocationEnter;

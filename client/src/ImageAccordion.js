@@ -9,7 +9,9 @@ const ImageAccordion = props => {
 		    <div className="slider-container">
 		      <div className="flexbox-slider flexbox-slider-1">
 		        <div className="flexbox-slide">
-		          <img src="./image/earthquake.png" alt="Slide Image" />
+		       	  <div className="verticalText"><p><span>Tsunami</span></p></div>
+		          <img src="./image/tsunami.gif" alt="Slide Image" />
+
 		          <div className="text-block">
 		            <h3>Slide #1 is here</h3>
 		            <div className="text">
@@ -18,7 +20,8 @@ const ImageAccordion = props => {
 		          </div>
 		        </div>
 		        <div className="flexbox-slide">
-		          <img src="./image/hurricane.png" alt="Slide Image" />
+		         <div className="verticalText-Hurricane"><p><span>Hurricane</span></p></div>
+		          <img src="./image/hurricane.gif" alt="Slide Image" />
 		          <div className="text-block">
 		            <h3>Slide #2 is here</h3>
 		            <div className="text">
@@ -27,7 +30,8 @@ const ImageAccordion = props => {
 		          </div>
 		        </div>
 		        <div className="flexbox-slide">
-		          <img src="./image/tornado.png" alt="Slide Image" />
+		          <div className="verticalText"><p><span>Tornado</span></p></div>
+		          <img src="./image/tornado.gif" alt="Slide Image" />
 		          <div className="text-block">
 		            <h3>Slide #3 is here</h3>
 		            <div className="text">
@@ -36,7 +40,8 @@ const ImageAccordion = props => {
 		          </div>
 		        </div>
 		        <div className="flexbox-slide">
-		          <img src="./image/tsunami.png" alt="Slide Image" />
+		          <div className="verticalText-Earthquake"><p><span>Earthquake</span></p></div>
+		          <img src="./image/earthquake.gif" alt="Slide Image" />
 		          <div className="text-block">
 		            <h3>Slide #4 is here</h3>
 		            <div className="text">
@@ -45,7 +50,8 @@ const ImageAccordion = props => {
 		          </div>
 		        </div>
 		        <div className="flexbox-slide">
-		          <img src="./image/wildfire.png" alt="Slide Image" />
+		         <div className="verticalText"><p><span>Wildfire</span></p></div>
+		          <img src="./image/wildfire.gif" alt="Slide Image" />
 		          <div className="text-block">
 		            <h3>Slide #5 is here</h3>
 		            <div className="text">

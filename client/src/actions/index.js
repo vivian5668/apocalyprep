@@ -5,6 +5,7 @@ import { REMOVE_TOKEN} from "../constants/action-types";
 import { SET_GOOGLE_USER} from "../constants/action-types";
 import { REMOVE_GOOGLE_USER} from "../constants/action-types";
 import { SET_POINT } from "../constants/action-types";
+import { SET_ALERTS } from "../constants/action-types";
 
 
 // actions are objs, build an action with a simple function that takes 1 parameter
@@ -35,6 +36,10 @@ export const removeGoogleUser = () => (
 
 export const setPoint = (point) => (
   { type: SET_POINT, payload: point }
+)
+
+export const setAlerts = (alerts) => (
+  { type: SET_ALERTS, payload: alerts }
 )
 // Notes on actions
 

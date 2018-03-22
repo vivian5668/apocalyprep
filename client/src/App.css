@@ -1,21 +1,44 @@
 .App {
   text-align: center;
-
   font-family: 'Raleway', sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 .grey {
   background-color: grey;
 }
 
+video {
+  height: 100vh;
+  width: 100%;
+}
+
+.videodiv {
+  margin: 0;
+  padding: 0;
+  z-index: -100;
+  overflow-y: hidden;
+}
+
+#background-video {
+  object-fit: cover;
+}
 
 body {
   max-height: 100vw;
-  font-family: 'Roboto', sans-serif;
 }
 
+nav {
+  font-family: 'Raleway', sans-serif;
+}
+
+
 .container {
+
   object-fit: contain;
   width: auto;
   height: auto;
@@ -25,6 +48,7 @@ body {
 }
 
 .locationform {
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   left: 40%;
   top: 40%;
@@ -51,4 +75,8 @@ body {
   text-align: left;
   position: absolute;
 
+}
+
+.collapsible-accordion {
+  text-align: left !important;
 }

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { TextField } from 'material-ui';
+import {Row, Col} from 'react-materialize';
+import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
     super()
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      redirect: false
     }
     this.handleEmailChange = this.handleEmailChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
@@ -32,21 +34,29 @@ class Login extends Component {
       localStorage.setItem('mernToken', result.data.token)
       this.props.liftToken(result.data)
     }).catch( err => console.log(err) )
-  }
+    this.setState({
+      redirect: true
+    })
+}
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/location' />
+    }
+
     return (
-      <form onSubmit={this.handleSubmit}>
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        <TextField
-          floatingLabelText="Password"
-          type="password"
-          value={this.state.password}
-          onChange={this.handlePasswordChange}
-        /><br />
-        <input type='submit' value='Log In!' />
-        <a href="/auth/google">Sign In with Google!</a>
-      </form>
+      <Row>
+        <Col s={3}></Col>
+        <Col className='center' s={6}>
+          <form onSubmit={this.handleSubmit}>
+            <input placeholder='Email' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
+            <input placeholder='Password' type="password" value={this.state.password} onChange={this.handlePasswordChange}/><br />
+            <input type='submit' value='Log In!' />
+            <a href="/auth/google">Sign In with Google!</a>
+          </form>
+        </Col>
+        <Col s={3}></Col>
+      </Row>
     )
   }
 }

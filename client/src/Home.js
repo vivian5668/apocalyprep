@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { addItem } from "./actions/index";
 import { liftTokenToState } from './actions/index';
 import { logout } from './actions/index';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import {Row, Col, Button, Icon} from 'react-materialize';
+import LocationEnter from './LocationEnter';
 
 import axios from 'axios';
 
@@ -44,23 +45,16 @@ class ConnectedHome extends Component {
 
   render() {
     return (
-      <Grid fluid>
-        <Row center='sm'>
-          <Col sm={12}>
-            <div className='container'>
-              <form className='locationform'>
-                <input id='location' type='text' />
-                <label htmlFor='location'>Enter city & state</label>
-              </form>
-              <div className='videowrapper'>
+      <Row>
+          <Col s={12}>
+              <LocationEnter />
+              <div className='videodiv'>
                 <video id='background-video' loop autoPlay>
                   <source src='img/starrySky.mp4' type='video/mp4' />
                 </video>
               </div>
-            </div>
           </Col>
-        </Row>
-      </Grid>
+      </Row>
     )
   }
 }
