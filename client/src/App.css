@@ -56,7 +56,13 @@ video {
   text-align: center;
   height: 100vh;
   position: relative;
-  top: -40px;
+  top: -20px;
+}
+
+form {
+  width: 50vw;
+  padding: 60px 0 0 0;
+  margin: 0 auto;
 }
 
 .text {
