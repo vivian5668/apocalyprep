@@ -9,6 +9,7 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
+import UserList from './Userlist';
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -132,6 +133,7 @@ class ConnectedApp extends Component {
             <Route exact path = '/' component={Home} />
             <Route path = '/location' component={Location} />
             <Route path = '/supplylist' component={SupplyList} />
+            <Route path = '/userlist' component={UserList} />
             <Route path = '/user' component={() => <UserProfile user={theUser}/>} />
             <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
             <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />

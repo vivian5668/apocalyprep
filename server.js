@@ -58,6 +58,34 @@ app.get('/api/supplylist', (req, res) => {
   });
 });
 
+//this route returns a 500 error
+// app.get('/api/userlist', (req, res) => {
+//   console.log("You've hit the API to find all supplies");
+//   // Find all supplies
+//   User.findOne({ email: req.body.user.email }, {supplies}, function (err, person) {
+//     if (err) return (err);
+//     console.log('we hit the user findOne route')
+//   });
+// });
+
+//this route works, but it's not returning useful data
+app.get('/api/userlist', (req, res) => {
+  console.log("You've hit the API to find all supplies");
+  // Find all supplies
+  Supply.find({}, function(err, supplylist) {
+    if (err) {
+      console.log("There was a db error");
+      res.send(err);
+    } else {
+      console.log("Got supplylist from DB!")
+      // This is the raw array of supply list objects
+      res.send(supplylist);
+    }
+  });
+});
+
+
+
 app.post('/addsupplies', (req, res) => {
   console.log("In the add supplies route")
   console.log(req.body.user)
