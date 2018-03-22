@@ -7,15 +7,19 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
+<<<<<<< HEAD
+import Nav from './Nav';
+
+=======
 import Navbar from './Navbar';
 import SupplyList from './SupplyList';
+>>>>>>> b853e1d7c74c0a815decf801a7c91ea5079381bb
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
 import { setGoogleUser } from './actions/index';
 import { removeGoogleUser } from './actions/index';
 import { logout } from './actions/index';
-import { RaisedButton } from 'material-ui';
 
 
 import {
@@ -53,10 +57,10 @@ class ConnectedApp extends Component {
   //     user: null,
   //     googleUser: null
   //   }
-  //   this.liftTokenToState = this.liftTokenToState.bind(this)
-  //   this.logout = this.logout.bind(this)
-  //   this.checkForLocalToken = this.checkForLocalToken.bind(this)
-  //   this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
+    // this.liftTokenToState = this.liftTokenToState.bind(this)
+    this.logout = this.logout.bind(this)
+    this.checkForLocalToken = this.checkForLocalToken.bind(this)
+    this.checkForGoogleUser = this.checkForGoogleUser.bind(this)
   }
 
 
@@ -166,7 +170,7 @@ class ConnectedApp extends Component {
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
               <RaisedButton>Hi</RaisedButton>
-            </div>
+            </div>x
 
         </Router>
       )
