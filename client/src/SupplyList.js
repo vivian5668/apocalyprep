@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import axios from 'axios';
 import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
 import { connect } from 'react-redux';
@@ -80,19 +79,18 @@ class ConnectedSupplyList extends Component  {
   }
 
   componentDidMount() {
-    console.log("Entering componentDidMount")
+
     //call database using Axios. this route is set up in server.js
     //put all things in 1 big array -- allSupply[].
     //this call runs only once.
     axios.get('/api/supplylist').then(result => {
-      console.log("Just got the supplyList")
-      console.log(result)
+
       this.setState({
         //we're getting the data sent from server.js
         allSupply: result.data
       })
     }).then(() => {
-      console.log('hihi');
+
       this.filterSupply()
       console.log(this.state)
 
