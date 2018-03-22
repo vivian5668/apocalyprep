@@ -6,6 +6,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: white;
 }
 
 .grey {
@@ -24,6 +26,10 @@ video {
   overflow-y: hidden;
 }
 
+/*#videoRow {
+  background-color: black
+}*/
+
 #background-video {
   object-fit: cover;
 }
@@ -34,6 +40,8 @@ body {
 
 nav {
   font-family: 'Raleway', sans-serif;
+  background-color: black;
+  color: white;
 }
 
 
