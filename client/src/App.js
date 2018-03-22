@@ -86,8 +86,8 @@ class ConnectedApp extends Component {
         token: token
       }).then( result => {
         localStorage.setItem('mernToken', result.data.token);
-        console.log("this is the token and user:")
-        console.log(result.data)
+        // console.log("this is the token and user:")
+        // console.log('in app.js', result.data)
         this.props.liftTokenToState(result.data);
       }).catch( err => console.log(err) )
     }
@@ -122,9 +122,9 @@ class ConnectedApp extends Component {
 
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
-    console.log(theUser)
+    // console.log(theUser)
     return (
       <div>
         <Router>

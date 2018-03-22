@@ -30,9 +30,11 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }).then( result => {
-      console.log(result.data)
-      localStorage.setItem('mernToken', result.data.token)
-      this.props.liftToken(result.data)
+      console.log('result data', result.data)
+      if(result.data.user) {
+        localStorage.setItem('mernToken', result.data.token)
+        this.props.liftToken(result.data)
+      }
     }).catch( err => console.log(err) )
     this.setState({
       redirect: true
