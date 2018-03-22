@@ -24,14 +24,43 @@ video {
   padding: 0;
   z-index: -100;
   overflow-y: hidden;
+
 }
 
-/*#videoRow {
-  background-color: black
-}*/
+#videoRow {
+   text-align: center;
+}
 
 #background-video {
   object-fit: cover;
+}
+
+.alertDiv {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  /*top: 10px;*/
+  /*justify-content: flex-start;*/
+}
+
+.accordionDiv {
+  display: inline-block;
+  width: 80%;
+  height: 100vh;
+  top: -250px;
+  z-index: 1
+}
+
+.accordionPage {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  top: -40px;
+}
+
+.text {
+  text-align: left;
 }
 
 body {
@@ -42,6 +71,7 @@ nav {
   font-family: 'Raleway', sans-serif;
   background-color: black;
   color: white;
+  z-index: 100;
 }
 
 
