@@ -9,9 +9,7 @@ const UserProfile = props => {
     return (
         <div>
           <div>
-            <h2>Login and Logout!</h2>
             <p>Hello, {props.user.name}!</p>
-            <button onClick={props.logout}>Log Out!</button>
           </div>
             <Row>
               <Col className="grey" sm={4}>

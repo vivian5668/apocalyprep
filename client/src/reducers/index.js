@@ -28,7 +28,7 @@ const rootReducer = (state = initialState, action) => {
     case LIFT_TOKEN_TO_STATE:
       console.log("LIFT_TOKEN_TO_STATE")
       console.log(action.payload)
-      return Object.assign({}, state, {token: action.payload.token, user: action.payload.user})
+      return {...state, token: action.payload.token, user: action.payload.user};
     case LOGOUT:
       console.log("LOGOUT");
       localStorage.removeItem('mernToken');

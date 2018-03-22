@@ -36,7 +36,7 @@ const Alerts = (props) => {
       return(
           <div>
             <h3>alerts</h3>
-            <p>Alert: {props.alerts[0].properties.headline}</p>
+            <p>Alert: {props.alerts.data.features[0].properties.headline}</p>
           </div>
           // console.log({this.props.alerts})
         )

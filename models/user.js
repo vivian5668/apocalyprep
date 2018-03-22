@@ -3,6 +3,7 @@ var bcrypt = require('bcrypt');
 var Schema = mongoose.Schema;
 var User = require('./user');
 
+
 var userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -56,6 +57,8 @@ userSchema.pre('save', function(next) {
   this.password = hash;
   next();
 });
+
+//write a hook on exec or lean to delete password
 
 var User = mongoose.model('User', userSchema);
 

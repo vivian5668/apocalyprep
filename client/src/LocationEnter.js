@@ -4,6 +4,7 @@ import Geocode from "react-geocode";
 import { setPoint } from './actions/index';
 import { setAlerts } from './actions/index';
 import  { Redirect } from 'react-router-dom';
+import {Row, Col, Button, Icon, Label, Input, Form} from 'react-materialize';
 import axios from 'axios';
 
 
@@ -61,7 +62,7 @@ class ConnectedLocationEnter extends Component {
        }
      ).then(() => {
        axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
-         this.props.setAlerts(result.data.features)
+         this.props.setAlerts(result)
          console.log("AFTER SET RESULT", result)
        })
      })
@@ -85,9 +86,9 @@ class ConnectedLocationEnter extends Component {
     return (
       <form className='locationform' onSubmit={this.handleSubmit} >
         <label>
-          <input type="text" value={this.state.address} onChange={this.handleChange} />
+          <Input  type="text" label="city, st" value={this.state.address} onChange={this.handleChange} />
+          <Input className='btn waves-effect grey darken-4 white-text' type="submit" value="submit" />
         </label>
-        <input className='btn waves-effect grey darken-4 white-text' type="submit" value="Submit" />
       </form>
     );
   }
