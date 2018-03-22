@@ -1,32 +1,32 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import PropTypes from 'prop-types';
+import { Row, Col, Icon } from 'react-materialize';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-export const UserProfile = props => {
-  return (
-      <div>
+const UserProfile = props => {
+  if (props.user) {
+    return (
         <div>
-          <h2>Login and Logout!</h2>
-          <p>Hello, {props.user.name}!</p>
-          <button onClick={props.logout}>Log Out!</button>
+          <div>
+            <h2>Login and Logout!</h2>
+            <p>Hello, {props.user.name}!</p>
+            <button onClick={props.logout}>Log Out!</button>
+          </div>
+            <Row>
+              <Col className="grey" sm={4}>
+              </Col>
+              <Col className="grey" sm={4}>
+                <Col sm={12}> <h2>emergency prep: to do</h2> </Col>
+              </Col>
+              <Col className="grey" sm={4}>
+                <Col sm={12}> <h2>emergency prep: done</h2> </Col>
+              </Col>
+            </Row>
         </div>
-        <Grid fluid>
-          <Row>
-            <Col className="grey" sm={4}>
-              <Col sm={12}> <h2>Detroit, MI</h2> </Col>
-              <Col sm={12}> <h2>alert</h2> </Col>
-              <Col sm={12}> <h2>alert</h2> </Col>
-              <Col sm={12}> <h2>alert</h2> </Col>
-              <Col sm={12}> <h2>alert</h2> </Col>
-            </Col>
-            <Col className="grey" sm={4}>
-              <Col sm={12}> <h2>emergency prep: to do</h2> </Col>
-            </Col>
-            <Col className="grey" sm={4}>
-              <Col sm={12}> <h2>emergency prep: done</h2> </Col>
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-  )
+    )
+  }
+  return <div />
 }
+
+export default UserProfile;
