@@ -44,7 +44,7 @@ class ConnectedSupplyList extends Component  {
   }
 
   filterSupply = () => {
-    console.log(this.state.allSupply[0])
+
     // filter all supplies into categories & new arrays using swich case
     this.state.allSupply.forEach((item) => {
       switch(true) {
@@ -103,17 +103,17 @@ class ConnectedSupplyList extends Component  {
      // map through the 5 arrays i've built to create li elements
      var medicalList = this.state.medicalArray.map((item,index) =>
      <li key={index}>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var foodwaterList = this.state.foodwaterArray.map((item,index) =>
      <li key={index}>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var toolList = this.state.toolArray.map((item,index) =>
      <li key={index}>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var techList = this.state.techArray.map((item,index) =>
@@ -123,7 +123,7 @@ class ConnectedSupplyList extends Component  {
 
      var docList = this.state.docArray.map((item,index) =>
      <li key={index}>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in'  />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange}  />
      {item.name}</li>)
 
 
