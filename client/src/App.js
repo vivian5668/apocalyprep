@@ -131,9 +131,11 @@ class ConnectedApp extends Component {
                   <Link to='/location'>location</Link>{' '}
                   <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
                   <Link to='/user'>User</Link>{' '}
+                  <Link to='/supplylist'>Supply List</Link>{' '}
               </nav>
               <Route exact path = '/' component={Home} />
               <Route path = '/location' component={Location} />
+              <Route path = '/supplylist' component={SupplyList} />
               <UserProfile user={theUser} logout={this.logout} />
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 

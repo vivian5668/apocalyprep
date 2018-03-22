@@ -9,6 +9,7 @@ var passport = require('./config/passportConfig');
 
 //model for supply list - this is populated into the database from the seeder file supply.js
 var Supply = require('./models/supply');
+var User = require('./models/user');
 
 // Mongoose stuff
 var mongoose = require('mongoose');
@@ -56,6 +57,26 @@ app.get('/api/supplylist', (req, res) => {
     }
   });
 });
+
+app.post('/addsupplies', (req, res) => {
+  console.log("In the add supplies route")
+  console.log(req.body.user)
+  User.find({email: 'jim@jim.com'}, function(err, user) {
+    console.log("THIS SHOULD BE THE USER");
+    console.log(user);
+    let newSupplies = [];
+    console.log("THIS SHOULD BE THE ITEM");
+    console.log(req.body.item)
+    newSupplies.push(req.body.item);
+    console.log(newSupplies);
+    console.log(user)
+    // user.supplies.push(req.body.item);
+    // user.save();
+    User.findOneAndUpdate({ email: user.email}, {supplies: newSupplies}, {upsert: true}, function(err, result) {
+      console.log(result)
+    })
+  })
+})
 
 
 const PORT = process.env.PORT || 5000
