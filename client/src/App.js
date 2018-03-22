@@ -5,7 +5,7 @@ import Home from './Home';
 import ImageAccordion from './ImageAccordion';
 import Location from './Location';
 import Login from './Login';
-import { UserProfile } from './UserProfile';
+import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
@@ -123,6 +123,7 @@ class ConnectedApp extends Component {
   render() {
     console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
+    console.log(theUser)
     return (
       <div>
         <Router>
@@ -131,7 +132,7 @@ class ConnectedApp extends Component {
             <Route exact path = '/' component={Home} />
             <Route path = '/location' component={Location} />
             <Route path = '/supplylist' component={SupplyList} />
-            <Route path = '/user' component={UserProfile} />
+            <Route path = '/user' component={() => <UserProfile user={theUser}/>} />
             <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
             <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
             <Route path = '/ImageAccordion' component={ImageAccordion} />

@@ -15,7 +15,7 @@ const Nav = props => {
         <NavItem href='/supplylist'>Supply List</NavItem>
         <NavItem href='/user'>User</NavItem>
         <NavItem onClick={props.logout}>Log Out</NavItem>
-        <NavItem><Icon class="material-icons">person_outline</Icon>Hello, {props.user.name}!</NavItem>
+        <NavItem><Icon large class="material-icons">person_outline</Icon>Hello, {props.user.name}!</NavItem>
       </Navbar>
     )
   } else if (props.user === null){
