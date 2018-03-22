@@ -20,8 +20,7 @@ import { logout } from './actions/index';
 import {
            BrowserRouter as Router,
            Route,
-           Link,
-           Redirect
+           Link
         } from 'react-router-dom';
 
 import { connect } from 'react-redux';
@@ -48,12 +47,11 @@ const mapStateToProps = state => {
 class ConnectedApp extends Component {
   constructor(props) {
     super()
-    this.state = {
-      redirect: false
+  //   this.state = {
   //     token: '',
   //     user: null,
   //     googleUser: null
-    }
+  //   }
     // this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
     this.checkForLocalToken = this.checkForLocalToken.bind(this)
@@ -75,9 +73,6 @@ class ConnectedApp extends Component {
 
     this.props.logoutRedux();
     axios.get('/auth/logout', result => console.log(result))
-    this.setState({
-      redirect: true
-    })
   }
 
   checkForLocalToken() {
@@ -126,14 +121,9 @@ class ConnectedApp extends Component {
 
 
   render() {
-
-    if (this.state.redirect) {
-      return <Redirect to='/' />
-    }
-
+    console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
-
-  
+    console.log(theUser)
     return (
       <div>
         <Router>

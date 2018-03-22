@@ -45,10 +45,15 @@ class Login extends Component {
     }
 
     return (
+      <div>
+      <Row></Row>
+      <Row></Row>
+      <Row></Row>
+      <Row></Row>
       <Row>
         <Col s={3}></Col>
         <Col className='center' s={6}>
-          <form onSubmit={this.handleSubmit}>
+          <form id='loginform' onSubmit={this.handleSubmit}>
             <input placeholder='Email' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handlePasswordChange}/><br />
             <input type='submit' value='Log In!' />
@@ -57,6 +62,7 @@ class Login extends Component {
         </Col>
         <Col s={3}></Col>
       </Row>
+    </div>
     )
   }
 }

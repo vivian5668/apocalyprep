@@ -13,14 +13,16 @@ const Nav = props => {
         <NavItem href='/location'>My Location</NavItem>
         <NavItem href='/ImageAccordion'>ImageAccordion</NavItem>
         <NavItem href='/supplylist'>Supply List</NavItem>
-        <NavItem>
+        <li>
           <Dropdown trigger={<a><Icon>person</Icon></a>}>
             <NavItem>Hello, {props.user.name}!</NavItem>
             <NavItem href='/user'>User</NavItem>
             <NavItem divider />
-          	<NavItem onClick={props.logout}>Log Out</NavItem>
+            <li class="no-padding">
+              <a href='/' onClick={props.logout}>Log Out</a>
+            </li>
           </Dropdown>
-        </NavItem>
+        </li>
       </Navbar>
     )
   } else if (props.user === null){
