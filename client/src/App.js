@@ -7,13 +7,12 @@ import Location from './Location';
 import Login from './Login';
 import { UserProfile } from './UserProfile';
 import axios from 'axios';
-<<<<<<< HEAD
-import Nav from './Nav';
 
-=======
-import Navbar from './Navbar';
+
+
+// import Navbar from './Navbar';
 import SupplyList from './SupplyList';
->>>>>>> b853e1d7c74c0a815decf801a7c91ea5079381bb
+
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -169,8 +168,7 @@ class ConnectedApp extends Component {
               <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
               <Route path = '/ImageAccordion' component={ImageAccordion} />
 
-              <RaisedButton>Hi</RaisedButton>
-            </div>x
+            </div>
 
         </Router>
       )

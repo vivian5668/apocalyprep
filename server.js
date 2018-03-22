@@ -61,7 +61,7 @@ app.get('/api/supplylist', (req, res) => {
 app.post('/addsupplies', (req, res) => {
   console.log("In the add supplies route")
   console.log(req.body.user)
-  User.find({email: 'jim@jim.com'}, function(err, user) {
+  User.find({email: req.body.user.email}, function(err, user) {
     console.log("THIS SHOULD BE THE USER");
     console.log(user);
     let newSupplies = [];
@@ -70,8 +70,7 @@ app.post('/addsupplies', (req, res) => {
     newSupplies.push(req.body.item);
     console.log(newSupplies);
     console.log(user)
-    // user.supplies.push(req.body.item);
-    // user.save();
+    
     User.findOneAndUpdate({ email: user.email}, {supplies: newSupplies}, {upsert: true}, function(err, result) {
       console.log(result)
     })
