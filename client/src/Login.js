@@ -45,7 +45,7 @@ class Login extends Component {
           onChange={this.handlePasswordChange}
         /><br />
         <input type='submit' value='Log In!' />
-        <a href="/auth/google">Sign In with Google!</a>
+        <a className="gooSignIn" href="/auth/google">Sign In with Google!</a>
       </form>
     )
   }

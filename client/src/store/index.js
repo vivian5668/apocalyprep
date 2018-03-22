@@ -10,7 +10,7 @@ const initialState = {
   googleUser: null,
   // address: '',   // lowercase city and state *mah
   point: '',      // lat and long location *mah
-  alert: null    // object containing the alert data
+  alerts: null    // object containing the alert data
 }
 
 const store = createStore(rootReducer, /* Our reducers */

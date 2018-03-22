@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Alerts from './Alerts';
 import Form from './LocationEnter'
 
 //materialize ui
@@ -18,7 +18,7 @@ import { unregister as unregisterServiceWorker } from './registerServiceWorker';
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-      <App/>
+      <Alerts/>
     </MuiThemeProvider>
   </Provider>,
    document.getElementById('root'));
