@@ -45,7 +45,7 @@ class ConnectedHome extends Component {
 
   render() {
     return (
-      <Row>
+      <Row id="videoRow">
           <Col s={12}>
               <LocationEnter />
               <div className='videodiv'>
