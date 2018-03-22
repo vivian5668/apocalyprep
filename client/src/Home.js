@@ -48,7 +48,7 @@ class ConnectedHome extends Component {
       <Row>
           <Col s={12}>
               <LocationEnter />
-              <div className='videowrapper'>
+              <div className='videodiv'>
                 <video id='background-video' loop autoPlay>
                   <source src='img/starrySky.mp4' type='video/mp4' />
                 </video>
