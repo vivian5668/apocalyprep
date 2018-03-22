@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Form from './LocationEnter'
+import Form from './LocationEnter';
 
 //materialize ui
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
