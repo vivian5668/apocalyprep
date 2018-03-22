@@ -4,6 +4,8 @@ import { LOGOUT } from "../constants/action-types";
 import { REMOVE_TOKEN } from "../constants/action-types";
 import { SET_GOOGLE_USER } from "../constants/action-types";
 import { REMOVE_GOOGLE_USER } from "../constants/action-types";
+import { SET_POINT } from "../constants/action-types";
+import { SET_ALERTS } from "../constants/action-types"
 import axios from 'axios';
 
 
@@ -14,7 +16,7 @@ const initialState = {
   googleUser: null,
   // address: '',   // lowercase city and state *mah
   point: '',      // lat and long location *mah
-  alert: null    // object containing the alert data
+  alerts: null    // object containing the alert data
 }
 
 
@@ -40,6 +42,13 @@ const rootReducer = (state = initialState, action) => {
     case REMOVE_GOOGLE_USER:
       console.log('REMOVE_GOOGLE_USER');
       return Object.assign({}, state, {googleUser: null})
+    case SET_POINT:
+      console.log('SET_POINT');
+      console.log("reducers", action.payload)
+      return Object.assign({}, state, {point: action.payload})
+    case SET_ALERTS:
+      console.log('SET_ALERTS');
+      return Object.assign({}, state, {alert: action.payload})
 
     default:
       return state;

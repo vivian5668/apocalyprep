@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Alerts from './Alerts';
 import Form from './LocationEnter'
 
 // import registerServiceWorker from './registerServiceWorker';
