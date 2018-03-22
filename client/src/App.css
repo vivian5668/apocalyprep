@@ -12,6 +12,21 @@ html, body {
   background-color: grey;
 }
 
+video {
+  height: 100vh;
+  width: 100%;
+}
+
+.videodiv {
+  margin: 0;
+  padding: 0;
+  z-index: -100;
+  overflow-y: hidden;
+}
+
+#background-video {
+  object-fit: cover;
+}
 
 body {
   max-height: 100vw;
