@@ -73,7 +73,7 @@ body {
   max-height: 100vw;
 }
 
-nav {
+#navbar {
   font-family: 'Raleway', sans-serif;
   background-color: black;
   color: white;
