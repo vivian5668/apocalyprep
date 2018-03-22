@@ -43,6 +43,7 @@ app.use(function(req, res, next) {
 app.use('/auth', auth);
 
 // Get all supply list data from database, will pass on to supplylist.js component
+// also used by the Eventearthquake and other event routes
 app.get('/api/supplylist', (req, res) => {
   console.log("You've hit the API to find all supplies");
   // Find all supplies
@@ -58,7 +59,7 @@ app.get('/api/supplylist', (req, res) => {
   });
 });
 
-//this route returns a 500 error
+//this pulls the user data for the userlist component
 app.get('/api/userlist', (req, res) => {
   console.log("You've hit the API to find all supplies");
   // Find all supplies
@@ -69,36 +70,26 @@ app.get('/api/userlist', (req, res) => {
 });
 
 //this route works, but it's not returning useful data
-app.get('/api/supplylist', (req, res) => {
-  console.log("You've hit the API to find all supplies");
-  // Find all supplies
-  Supply.find({}, function(err, supplylist) {
-    if (err) {
-      console.log("There was a db error");
-      res.send(err);
-    } else {
-      console.log("Got supplylist from DB!")
-      // This is the raw array of supply list objects
-      res.send(supplylist);
-    }
-  });
-});
-
+// app.get('/api/supplylist', (req, res) => {
+//   console.log("You've hit the API to find all supplies");
+//   // Find all supplies
+//   Supply.find({}, function(err, supplylist) {
+//     if (err) {
+//       console.log("There was a db error");
+//       res.send(err);
+//     } else {
+//       console.log("Got supplylist from DB!")
+//       // This is the raw array of supply list objects
+//       res.send(supplylist);
+//     }
+//   });
+// });
 
 
 app.post('/addsupplies', (req, res) => {
   console.log("In the add supplies route")
   console.log(req.body.user)
   User.find({email: req.body.user.email}, function(err, user) {
-    // console.log("THIS SHOULD BE THE USER");
-    // console.log(user);
-    // let newSupplies = [];
-    // // console.log("THIS SHOULD BE THE ITEM");
-    // // console.log(req.body.item)
-    // newSupplies.push(req.body.item);
-    // console.log(newSupplies);
-    // console.log(user)
-    //
     User.findOneAndUpdate(
       { email: req.body.user.email},
       {$push: {supplies: req.body.item}},

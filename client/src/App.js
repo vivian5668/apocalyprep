@@ -10,6 +10,7 @@ import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
 import UserList from './Userlist';
+import EventEarthquake from './eventearthquake';
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -138,6 +139,7 @@ class ConnectedApp extends Component {
             <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
             <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
             <Route path = '/ImageAccordion' component={ImageAccordion} />
+            <Route path = '/eventearthquake' component={EventEarthquake} />
           </div>
         </Router>
       </div>
