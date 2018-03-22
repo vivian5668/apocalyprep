@@ -118,59 +118,31 @@ class ConnectedApp extends Component {
   // if a user exists as a token or as a googler user, do this 'if'
   // or, if no logged in user exists send them to the signup/Login
   // can only accept user token OR user google NOT both
+
+
   render() {
     console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
-    if (theUser) {
-      return (
+    return (
+      <div>
         <Router>
-            <div>
-              <nav>
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
-                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
-                  <Link to='/user'>User</Link>{' '}
-                  <Link to='/supplylist'>Supply List</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/location' component={Location} />
-              <Route path = '/supplylist' component={SupplyList} />
-              <UserProfile user={theUser} logout={this.logout} />
-              <Route path = '/ImageAccordion' component={ImageAccordion} />
-
-            </div>
-
+          <div>
+            <Nav user={theUser} logout={this.props.logout}/>
+            <Route exact path = '/' component={Home} />
+            <Route path = '/location' component={Location} />
+            <Route path = '/supplylist' component={SupplyList} />
+            <Route path = '/user' component={UserProfile} />
+            <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
+            <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
+            <Route path = '/ImageAccordion' component={ImageAccordion} />
+          </div>
         </Router>
-      )
-    } else {
-      return (
-        <Router>
-            <div className="App">
-              <nav>
-
-                  <Link to='/'>Home Page</Link> {' '}
-                  <Link to='/location'>location</Link>{' '}
-                  <Link to='/user'>User</Link>{' '}
-                  <Link to='/login'>Login</Link>{' '}
-                  <Link to='/signup'>Signup</Link>{' '}
-                  <Link to='/supplylist'>Supply List</Link>{' '}
-                  <Link to='/ImageAccordion'>ImageAccordion</Link>{' '}
-              </nav>
-              <Route exact path = '/' component={Home} />
-              <Route path = '/supplylist' component={SupplyList} />
-              <Route path = '/location' component={Location} />
-              <Route path = '/user' component={UserProfile} />
-              <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
-              <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
-              <Route path = '/ImageAccordion' component={ImageAccordion} />
-
-            </div>
-
-        </Router>
-      )
-    }
+      </div>
+    )
   }
 }
+
+
 
 const App = connect(mapStateToProps, mapDispatchToProps)(ConnectedApp)
 

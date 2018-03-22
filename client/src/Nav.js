@@ -12,6 +12,7 @@ const Nav = props => {
         <NavItem href='/'>Home Page</NavItem>
         <NavItem href='/location'>My Location</NavItem>
         <NavItem href='/ImageAccordion'>ImageAccordion</NavItem>
+        <NavItem href='/supplylist'>Supply List</NavItem>
         <NavItem href='/user'>User</NavItem>
         <NavItem onClick={props.logout}>Log Out</NavItem>
         <NavItem><Icon class="material-icons">person_outline</Icon>Hello, {props.user.name}!</NavItem>
