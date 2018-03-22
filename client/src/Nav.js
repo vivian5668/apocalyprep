@@ -18,7 +18,7 @@ const Nav = props => {
             <NavItem>Hello, {props.user.name}!</NavItem>
             <NavItem href='/user'>User</NavItem>
             <NavItem divider />
-            <li class="no-padding">
+            <li className="no-padding">
               <a href='/' onClick={props.logout}>Log Out</a>
             </li>
           </Dropdown>
