@@ -1,11 +1,15 @@
 import React from 'react';
+import Alerts from './Alerts';
 
 const ImageAccordion = props => {
   return (
     <div>
-    	<h3> ImageAccordion </h3>
+      <div className="container block">
+        <Alerts />
+      </div>
+      <h3> ImageAccordion </h3>
     	<div className="container">
-  
+
 		    <div className="slider-container">
 		      <div className="flexbox-slider flexbox-slider-1">
 		        <div className="flexbox-slide">
@@ -61,8 +65,8 @@ const ImageAccordion = props => {
 		        </div>
 		      </div>
 		    </div>
-		    
-	 
+
+
 		</div>
     </div>
   )
