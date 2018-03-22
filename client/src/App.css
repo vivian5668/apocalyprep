@@ -124,3 +124,18 @@ body {
 .collapsible-accordion {
   text-align: left !important;
 }
+
+.abouttext {
+  color: #000000 !important;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fab {
+  color: #000000;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: auto;
+}

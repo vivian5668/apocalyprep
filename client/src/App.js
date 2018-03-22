@@ -9,6 +9,7 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
+import About from './About';
 
 import { removeToken } from './actions/index';
 import { liftTokenToState } from './actions/index';
@@ -136,6 +137,7 @@ class ConnectedApp extends Component {
             <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
             <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
             <Route path = '/ImageAccordion' component={ImageAccordion} />
+            <Route path = '/about' component={About} />
           </div>
         </Router>
       </div>
