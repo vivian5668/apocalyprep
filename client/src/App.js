@@ -9,6 +9,8 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
+import UserList from './Userlist';
+import EventEarthquake from './eventearthquake';
 import About from './About';
 
 import { removeToken } from './actions/index';
@@ -86,8 +88,8 @@ class ConnectedApp extends Component {
         token: token
       }).then( result => {
         localStorage.setItem('mernToken', result.data.token);
-        console.log("this is the token and user:")
-        console.log(result.data)
+        // console.log("this is the token and user:")
+        // console.log('in app.js', result.data)
         this.props.liftTokenToState(result.data);
       }).catch( err => console.log(err) )
     }
@@ -122,9 +124,9 @@ class ConnectedApp extends Component {
 
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
-    console.log(theUser)
+    // console.log(theUser)
     return (
       <div>
         <Router>
@@ -133,10 +135,12 @@ class ConnectedApp extends Component {
             <Route exact path = '/' component={Home} />
             <Route path = '/location' component={Location} />
             <Route path = '/supplylist' component={SupplyList} />
+            <Route path = '/userlist' component={UserList} />
             <Route path = '/user' component={() => <UserProfile user={theUser}/>} />
             <Route path = '/login' component={() => <Login liftToken={this.props.liftTokenToState} />} />
             <Route path = '/signup' component={() => <Signup liftToken={this.props.liftTokenToState} />} />
             <Route path = '/ImageAccordion' component={ImageAccordion} />
+            <Route path = '/eventearthquake' component={EventEarthquake} />
             <Route path = '/about' component={About} />
           </div>
         </Router>

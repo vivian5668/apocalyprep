@@ -35,7 +35,7 @@ const About = props => {
           </Card>
         </Col>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Mike.jpeg"></CardTitle>}>
+          <Card horizontal header={<CardTitle image="./img/Mike.jpg"></CardTitle>}>
             <p className='abouttext'>Michael Hammer</p>
             <div className='iconlist'>
               <a href="https://github.com/HamMike">
@@ -48,7 +48,7 @@ const About = props => {
           </Card>
         </Col>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Scott.png"></CardTitle>}>
+          <Card horizontal header={<CardTitle image="./img/Scott.jpg"></CardTitle>}>
             <p className='abouttext'>Scott Molsness</p>
             <div className='iconlist'>
               <a href="https://github.com/smolsn13">
