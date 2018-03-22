@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Alerts from "./Alerts";
 import {Row, Col} from 'react-materialize';
 
@@ -10,7 +11,6 @@ const ImageAccordion = props => {
     		<Alerts />
     	</div>
     	<div className="accordionDiv">
-  
 		    <div className="slider-container">
 		      <div className="flexbox-slider flexbox-slider-1">
 		        <div className="flexbox-slide">
@@ -50,7 +50,7 @@ const ImageAccordion = props => {
 		          <div className="text-block">
 		            <h3>Earthquake</h3>
 		            <div className="text">
-		              <p>An earthquake (also known as a quake, tremor or temblor) is the shaking of the surface of the Earth, resulting from the sudden release of energy in the Earth's lithosphere that creates seismic waves. -Wikipedia</p>
+		              <p>An earthquake (also known as a quake, tremor or temblor) is the shaking of the surface of the Earth, resulting from the sudden release of energy in the Earths lithosphere that creates seismic waves. -Wikipedia</p>
 		            </div>
 		          </div>
 		        </div>
@@ -66,8 +66,8 @@ const ImageAccordion = props => {
 		        </div>
 		      </div>
 		    </div>
-		    
-	 
+
+
 		</div>
     </Row>
   )
