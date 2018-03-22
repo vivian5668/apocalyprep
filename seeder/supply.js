@@ -293,27 +293,27 @@ var things = [
     category: 'Documents',
   },
   {
-    name: 'For your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks. ',
+    name: 'Prep your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks. ',
     category: 'Earthquake',
   },
   {
-    name: 'For your home: Install strong latches or bolts on cabinets. Large or heavy items should be closest to the floor.',
+    name: 'Prep your home: Strap down televisions and other expensive or hazardous electrical components ',
     category: 'Earthquake',
   },
   {
-    name: 'For your home: ',
+    name: 'Prep your home: Anchor top-heavy, tall and freestanding furniture such as bookcases, china cabinets to wall studs to keep these from toppling over.',
     category: 'Earthquake',
   },
   {
-    name: 'Credit card, debit card photocopies (front and back of cards)',
+    name: 'Prep your family: Each family member should know to Drop, Cover, and Hold On when they feel an earthquake. ',
     category: 'Earthquake',
   },
   {
-    name: 'Credit card, debit card photocopies (front and back of cards)',
+    name: 'Prep  your family: Pick the best safe spot to hide. Under heavy furniture, inside a doorframe or against inside walls are ideal.',
     category: 'Earthquake',
   },
   {
-    name: 'Credit card, debit card photocopies (front and back of cards)',
+    name: 'Prep your family: If you are in bed when the earthquake strikes, stay there. Hold on and protect your head with a pillow.',
     category: 'Earthquake',
   },
   {
