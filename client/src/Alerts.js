@@ -35,7 +35,7 @@ class Alerts extends Component {
     return (
       <div>
         <h1>Alerts</h1>
-        <p></p>
+        <p>lorem................</p>
       </div>
     );
   }
