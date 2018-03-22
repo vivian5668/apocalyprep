@@ -6,56 +6,41 @@ import { setAlerts } from './actions/index';
 import  { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-
-const mapDispatchToProps = dispatch => { //dispatch here is a function
-  //this is a closure, it returns on object, it has a property addArticle
-  //this property is a function that turns article to a function
-  //this is a programming techinique, a func takes multiple parameters
-  //now it is reduced to one
-  return {
-    setPoint: (point) => dispatch(setPoint(point)),
-    setAlerts: (alerts) => dispatch(setAlerts(alerts))
-  }
-}
-
-
-const mapStateToProps = state => {
-  console.log(state.alerts)
-  return {
-    alerts: state.alerts
-  }
-}
-
-const ConnectedAlerts = ({alerts}) => (
-  <div>
-    <h3>alerts:</h3>
-    <ul>
-      {alerts.map((alerts) => (
-        <li >{alerts.data.feeatures.properties.headlines}</li>
-        ))}
-      </ul>
-      )
-  </div>
-)
-// {
-//
-//
-//   render() {
-//
-//     return (
-//       <div>
-//         <h3>alerts:</h3>
-//         <ul>
-//           {alerts.map((data) => (
-//             <li >{data.feeatures.properties.headlines}</li>
-//             ))}
-//           </ul>
-//           )
-//       </div>
-//     );
+// componentDidUpdate() {
+//   const mapStateToProps = state => {
+//     console.log('alerts in alerts:', state.alerts)
+//     return {
+//       alerts: state.alerts
+//     }
 //   }
 // }
+// const mapStateToProps = state => {
+//   console.log('alerts in alerts:', state.alerts)
+//   return {
+//     alerts: state.alerts
+//   }
+// }
+function mapStateToProps(state) {
+  return {alerts: state.alerts}
+}
 
-const Alerts = connect(mapStateToProps, mapDispatchToProps)(ConnectedAlerts)
 
-export default Alerts;
+// {this.props.alerts.data.data.features[0].properties.headline}
+const Alerts = (props) => {
+    console.log("in alerts:", props.alerts)
+    if (props.alerts === null) {
+      return(
+        <p>Alerts is equal </p>
+      )
+    } else {
+      return(
+          <div>
+            <h3>alerts</h3>
+            <p>Alert: {props.alerts[0].properties.headline}</p>
+          </div>
+          // console.log({this.props.alerts})
+        )
+    }
+}
+
+export default connect(mapStateToProps)(Alerts);

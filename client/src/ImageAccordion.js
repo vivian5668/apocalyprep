@@ -4,7 +4,7 @@ import Alerts from './Alerts';
 const ImageAccordion = props => {
   return (
     <div>
-      <div className="container block">
+      <div className="container">
         <Alerts />
       </div>
       <h3> ImageAccordion </h3>

@@ -4,7 +4,7 @@ import { Navbar, NavItem, Icon } from 'react-materialize';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const Nav = props => {
-  console.log(props)
+  //console.log(props)
 
   if (props.user !== null) {
     return (

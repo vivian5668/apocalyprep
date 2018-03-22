@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => { //dispatch here is a function
 
 
 const mapStateToProps = state => {
-  console.log('map state 2 prop', state.point)
+  console.log('map state 2 prop', state)
   return {
     point: state.point,
     alerts: state.alerts
@@ -58,16 +58,14 @@ class ConnectedLocationEnter extends Component {
          // console.log(response.results[0].geometry.location)
          // console.log(lat,lng);
          console.log('AFTER SET POINT', this.props.point)
-       },
-       error => {
-         console.error(error);
        }
      ).then(() => {
        axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
-         this.props.setAlerts(result)
-         console.log(result)
+         this.props.setAlerts(result.data.features)
+         console.log("AFTER SET RESULT", result)
        })
-     }). then(() => {
+     })
+     .then(() => {
        this.setState({
          redirect: true
        })

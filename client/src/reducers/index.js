@@ -48,7 +48,8 @@ const rootReducer = (state = initialState, action) => {
       return Object.assign({}, state, {point: action.payload})
     case SET_ALERTS:
       console.log('SET_ALERTS');
-      return Object.assign({}, state, {alert: action.payload})
+      console.log("reducers", action.payload)
+      return Object.assign({}, state, {alerts: action.payload})
 
     default:
       return state;
