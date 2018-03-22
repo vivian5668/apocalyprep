@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { TextField } from 'material-ui';
+import {Row, Col} from 'react-materialize';
 
 class Login extends Component {
   constructor(props) {
@@ -36,17 +36,18 @@ class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        <TextField
-          floatingLabelText="Password"
-          type="password"
-          value={this.state.password}
-          onChange={this.handlePasswordChange}
-        /><br />
-        <input type='submit' value='Log In!' />
-        <a className="gooSignIn" href="/auth/google">Sign In with Google!</a>
-      </form>
+      <Row>
+        <Col s={3}></Col>
+        <Col className='center' s={6}>
+          <form onSubmit={this.handleSubmit}>
+            <input placeholder='Email' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
+            <input placeholder='Password' type="password" value={this.state.password} onChange={this.handlePasswordChange}/><br />
+            <input type='submit' value='Log In!' />
+            <a href="/auth/google">Sign In with Google!</a>
+          </form>
+        </Col>
+        <Col s={3}></Col>
+      </Row>
     )
   }
 }

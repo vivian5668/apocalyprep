@@ -7,7 +7,11 @@ var googleUserSchema = new mongoose.Schema({
   },
   displayName: {
     type: String
-  }
+  },
+  supplies: [{
+    name: String,
+    category: String
+  }]
 });
 
 //mongoose has a function "model()"that takes a schema and makes a model out of it

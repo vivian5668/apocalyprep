@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
+var Schema = mongoose.Schema;
+var User = require('./user');
 
 var userSchema = new mongoose.Schema({
   name: {
@@ -20,7 +22,11 @@ var userSchema = new mongoose.Schema({
     required: true,
     minLength: 8,
     maxLength: 99
-  }
+  },
+  supplies: [{
+    name: String,
+    category: String
+  }]
 })
 
 userSchema.set('toJSON', {
