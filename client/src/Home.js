@@ -46,18 +46,14 @@ class ConnectedHome extends Component {
   render() {
     return (
       <Row>
-        <Row>
           <Col s={12}>
-            <div className='container'>
               <LocationEnter />
-              <div className='videowrapper'>
+              <div className='videodiv'>
                 <video id='background-video' loop autoPlay>
                   <source src='img/starrySky.mp4' type='video/mp4' />
                 </video>
               </div>
-            </div>
           </Col>
-        </Row>
       </Row>
     )
   }
