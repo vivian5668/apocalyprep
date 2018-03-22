@@ -292,6 +292,34 @@ var things = [
     name: 'Credit card, debit card photocopies (front and back of cards)',
     category: 'Documents',
   },
+  {
+    name: 'For your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks. ',
+    category: 'Earthquake',
+  },
+  {
+    name: 'For your home: Install strong latches or bolts on cabinets. Large or heavy items should be closest to the floor.',
+    category: 'Earthquake',
+  },
+  {
+    name: 'For your home: ',
+    category: 'Earthquake',
+  },
+  {
+    name: 'Credit card, debit card photocopies (front and back of cards)',
+    category: 'Earthquake',
+  },
+  {
+    name: 'Credit card, debit card photocopies (front and back of cards)',
+    category: 'Earthquake',
+  },
+  {
+    name: 'Credit card, debit card photocopies (front and back of cards)',
+    category: 'Earthquake',
+  },
+  {
+    name: 'Credit card, debit card photocopies (front and back of cards)',
+    category: 'Earthquake',
+  },
 ];
 
 things.forEach(function(thing) {
