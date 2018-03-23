@@ -6,7 +6,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background: url('image/space-dark_960.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 
@@ -184,5 +186,5 @@ body {
 .collapsible-header {
   background-color: transparent;
   color: white;
-  border-bottom: 1px solid white;
+  border: 1px solid white;
 }
