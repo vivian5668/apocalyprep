@@ -124,3 +124,16 @@ body {
 .collapsible-accordion {
   text-align: left !important;
 }
+
+.yourMom {
+  height: 100%;
+  overflow: scroll;
+  margin-top: 50px;
+  padding: 0 10px;
+  color: red;
+}
+
+.yourDad {
+  opacity: 0.5;
+  background-color: grey;
+}
