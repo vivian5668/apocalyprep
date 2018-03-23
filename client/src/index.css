@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 17px;
   color: #212121;
@@ -19,7 +19,7 @@ body {
 }
 .container h1 span {
   position: relative;
-  font-family: 'Merienda', cursive;
+  font-family: 'Raleway', sans-serif;
   color: #CA9CE1;
 }
 .container h1 span:after {
