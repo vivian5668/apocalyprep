@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
+import { Collapsible, CollapsibleItem, Input, Row, Col } from 'react-materialize'
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
@@ -100,58 +100,61 @@ class ConnectedSupplyList extends Component  {
   render() {
      // map through the 5 arrays i've built to create li elements
      var medicalList = this.state.medicalArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var foodwaterList = this.state.foodwaterArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var toolList = this.state.toolArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var techList = this.state.techArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var docList = this.state.docArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange}  />
      {item.name}</li>)
 
 
       return (
-        <div>
+        <Row>
 
-          <Collapsible accordion className="collapsible-accordion">
-            <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
-              <ul>{medicalList}</ul>
-            </CollapsibleItem>
+          <Col s={12}>
+            <Collapsible accordion className="collapsible-accordion allsupplyheader">
 
-            <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
-              <ul>{foodwaterList}</ul>
-            </CollapsibleItem>
+              <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
+                <ul>{medicalList}</ul>
+              </CollapsibleItem>
 
-            <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
-              <ul>{toolList}</ul>
-            </CollapsibleItem>
+              <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
+                <ul>{foodwaterList}</ul>
+              </CollapsibleItem>
 
-            <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
-              <ul>{techList}</ul>
-            </CollapsibleItem>
+              <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
+                <ul>{toolList}</ul>
+              </CollapsibleItem>
 
-            <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
-              <ul>{docList}</ul>
-            </CollapsibleItem>
+              <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
+                <ul>{techList}</ul>
+              </CollapsibleItem>
 
-          </Collapsible>
+              <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
+                <ul>{docList}</ul>
+              </CollapsibleItem>
 
-        </div>
+            </Collapsible>
+          </Col>
+
+        </Row>
       )
 
   }

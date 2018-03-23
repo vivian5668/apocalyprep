@@ -124,3 +124,44 @@ body {
 .collapsible-accordion {
   text-align: left !important;
 }
+
+.abouttext {
+  color: #000000 !important;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fab {
+  color: #000000;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: auto;
+}
+
+.alertcol {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.supplylistcol {
+  color: #000000;
+}
+
+.supplyheader {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.userlistcol {
+  color: #000000;
+}
+
+.supplylistitems {
+  color: #FFFFFF;
+}
+
+.allsupplyheader {
+  color: #000000;
+}
