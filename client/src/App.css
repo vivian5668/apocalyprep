@@ -10,9 +10,15 @@ html, body {
   color: white;
 }
 
-.grey {
-  background-color: grey;
+/* .style-checkbox[type="checkbox"] + label:active {
+    background: red;
+} */
+
+.filled-in-li {
+  display: inline-block !important;
 }
+
+
 
 video {
   height: 100vh;
@@ -125,6 +131,7 @@ body {
   text-align: left !important;
 }
 
+
 .abouttext {
   color: #000000 !important;
   text-align: center;
@@ -164,6 +171,20 @@ body {
 
 .allsupplyheader {
   color: #000000;
+}
+
+.yourMom {
+  height: 100%;
+  overflow: scroll;
+  margin-top: 50px;
+  padding: 0 10px;
+  color: red;
+}
+
+.yourDad {
+  opacity: 0.5;
+  background-color: grey;
+
 }
 
 .loginbutton {
