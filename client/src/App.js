@@ -3,7 +3,7 @@ import './App.css';
 import Signup from './Signup';
 import Home from './Home';
 import ImageAccordion from './ImageAccordion';
-import Location from './Location';
+
 import Login from './Login';
 import UserProfile from './UserProfile';
 import axios from 'axios';
@@ -147,7 +147,7 @@ class ConnectedApp extends Component {
           <div>
             <Nav user={theUser} logout={this.props.logout}/>
             <Route exact path = '/' component={Home} />
-            <Route path = '/location' component={Location} />
+          
             <Route path = '/supplylist' component={SupplyList} />
             <Route path = '/userlist' component={UserList} />
             <Route path = '/user' component={() => <UserProfile user={theUser}/>} />

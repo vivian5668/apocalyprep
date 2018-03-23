@@ -13,17 +13,14 @@ html, body {
 
 }
 
+label {
+  color: white;
+}
+
 body {
   overflow-y: hidden;
 }
 
-[type="checkbox"] {
-  color: white;
-}
-
-.filled-in {
-  color: white;
-}
 
 .filled-in-li {
   display: inline-block !important;
@@ -88,6 +85,10 @@ form {
 
 body {
   max-height: 100vw;
+}
+
+.brand-logo {
+ left: 2%;
 }
 
 #navbar {
