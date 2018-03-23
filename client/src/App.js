@@ -9,6 +9,7 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
+import UserList from './UserList';
 
 import SupplyListDetailsTornado from './SupplyListDetailsTornado';
 import SupplyListDetailsTsunami from './SupplyListDetailsTsunami';

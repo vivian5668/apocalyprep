@@ -62,7 +62,7 @@ class ConnectedLocationEnter extends Component {
        }
      ).then(() => {
        axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
-         this.props.setAlerts(result)
+         this.props.setAlerts(result.data)
          console.log("AFTER SET RESULT", result)
        })
      })

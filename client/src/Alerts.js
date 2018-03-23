@@ -34,9 +34,20 @@ const Alerts = (props) => {
       )
     } else {
       return(
+
           <div>
             <h3>alerts</h3>
-            <p>Alert: {props.alerts.data.features[0].properties.headline}</p>
+            // Object.keys(obj).map(e => console.log(`key=${e}  value=${obj[e]}`));
+            //
+            // Object.keys(obj).forEach(function(key,index) {
+              // key: the name of the object key
+              // index: the ordinal position of the key within the object
+            });
+            <p>Alert: {props.alerts.features[0].properties.headline}</p>
+            <p>Alert: {props.alerts.features[1].properties.headline}</p>
+            <p>Alert: {props.alerts.features[2].properties.headline}</p>
+            <p>Alert: {props.alerts.features[3].properties.headline}</p>
+            <p>Alert: {props.alerts.features[4].properties.headline}</p>
           </div>
           // console.log({this.props.alerts})
         )
