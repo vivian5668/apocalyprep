@@ -10,9 +10,15 @@ html, body {
   color: white;
 }
 
-.grey {
-  background-color: grey;
+/* .style-checkbox[type="checkbox"] + label:active {
+    background: red;
+} */
+
+.filled-in-li {
+  display: inline-block !important;
 }
+
+
 
 video {
   height: 100vh;
