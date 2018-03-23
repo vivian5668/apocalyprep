@@ -24,8 +24,6 @@ import EventWildfire from './eventwildfire';
 import EventTsunami from './eventtsunami';
 import EventHurricane from './eventhurricane';
 
-
-import EventEarthquake from './eventearthquake';
 import About from './About';
 
 

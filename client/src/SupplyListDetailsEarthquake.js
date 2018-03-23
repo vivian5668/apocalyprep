@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SupplyList from './SupplyList';
 import {Row, Col, Button, Icon} from 'react-materialize';
+import Eventearthquake from './eventearthquake';
 
 class SupplyListDetailsEarthquake extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class SupplyListDetailsEarthquake extends Component {
               </Row>
               <Row>
                   <Col s={12}>
-                      <h3> Hello Tornado </h3>
+                      <Eventearthquake />
                   </Col>
               </Row>
           </Col>

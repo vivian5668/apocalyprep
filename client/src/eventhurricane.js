@@ -80,6 +80,6 @@ class ConnectedEventHurricane extends Component  {
   }
 }
 
-const eventhurricane = connect(mapStateToProps, null)(ConnectedEventHurricane);
+const EventHurricane = connect(mapStateToProps, null)(ConnectedEventHurricane);
 
-export default eventhurricane;
+export default EventHurricane;
