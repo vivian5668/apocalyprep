@@ -104,7 +104,6 @@ class ConnectedSupplyList extends Component  {
      <div>
        <li key={index} className='supplylistitems filled-in-li'>
         <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
-
        </li>
        <br />
       </div>)
@@ -113,7 +112,6 @@ class ConnectedSupplyList extends Component  {
      <div>
        <li key={index}  className='supplylistitems filled-in-li'>
        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox'onChange={this.handleChange} />
-
        </li>
        <br />
      </div>)
@@ -122,7 +120,6 @@ class ConnectedSupplyList extends Component  {
      <div>
        <li key={index} className='supplylistitems filled-in-li'>
        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
-
        </li>
        <br />
      </div>)
@@ -131,7 +128,6 @@ class ConnectedSupplyList extends Component  {
      <div>
        <li key={index}  className='supplylistitems filled-in-li'>
        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
-
        </li>
        <br />
      </div>)
@@ -140,7 +136,6 @@ class ConnectedSupplyList extends Component  {
     <div>
        <li key={index}  className='supplylistitems filled-in-li'>
        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange}  />
-
        </li>
        <br />
      </div>)
@@ -148,35 +143,33 @@ class ConnectedSupplyList extends Component  {
 
       return (
         <Row>
-
           <Col s={12}>
-          <div>
-            <Collapsible accordion className="collapsible-accordion allsupplyheader">
+            <div>
+              <Collapsible accordion className="collapsible-accordion allsupplyheader">
 
-              <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
-                <ul>{medicalList}</ul>
-              </CollapsibleItem>
+                <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
+                  <ul>{medicalList}</ul>
+                </CollapsibleItem>
 
-              <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
-              <ul>{foodwaterList}</ul>
-              </CollapsibleItem>
+                <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
+                <ul>{foodwaterList}</ul>
+                </CollapsibleItem>
 
-              <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
-              <ul>{toolList}</ul>
-              </CollapsibleItem>
+                <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
+                <ul>{toolList}</ul>
+                </CollapsibleItem>
 
-              <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
-              <ul>{techList}</ul>
-              </CollapsibleItem>
+                <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
+                <ul>{techList}</ul>
+                </CollapsibleItem>
 
-              <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
-              <ul>{docList}</ul>
-              </CollapsibleItem>
+                <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
+                <ul>{docList}</ul>
+                </CollapsibleItem>
 
-            </Collapsible>
-          </div>
+              </Collapsible>        
+            </div>
           </Col>
-
         </Row>
       )
 
