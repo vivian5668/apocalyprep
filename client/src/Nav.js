@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Navbar, NavItem, Icon, Dropdown } from 'react-materialize';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Nav = props => {
   //console.log(props)
@@ -9,14 +9,15 @@ const Nav = props => {
   if (props.user !== null) {
     return (
       <Navbar brand='apocalyprep' right id='navbar'>
-        <NavItem href='/'>Home Page</NavItem>
-        <NavItem href='/location'>My Location</NavItem>
-        <NavItem href='/ImageAccordion'>ImageAccordion</NavItem>
-        <NavItem href='/supplylist'>Supply List</NavItem>
+        <NavItem><Link to="/">Home</Link></NavItem>
+        <NavItem><Link to="/location">Disasters</Link></NavItem>
+        <NavItem><Link to="/ImageAccordion">Alerts</Link></NavItem>
+        <NavItem><Link to="/supplylist">Supplies</Link></NavItem>
+        <NavItem><Link to="/about">About</Link></NavItem>
         <li>
           <Dropdown trigger={<a><Icon>person</Icon></a>}>
             <NavItem>Hello, {props.user.name}!</NavItem>
-            <NavItem href='/user'>User</NavItem>
+            <NavItem><Link to="/">User</Link></NavItem>
             <NavItem divider />
             <li className="no-padding">
               <a href='/' onClick={props.logout}>Log Out</a>
@@ -28,11 +29,13 @@ const Nav = props => {
   } else if (props.user === null){
     return (
       <Navbar brand='apocalyprep' right id='navbar'>
-        <NavItem href='/'>Home Page</NavItem>
-        <NavItem href='/location'>My Location</NavItem>
-        <NavItem href='/ImageAccordion'>ImageAccordion</NavItem>
-        <NavItem href='/login'>Login</NavItem>
-        <NavItem href='/signup'>Signup</NavItem>
+        <NavItem><Link to="/">Home</Link></NavItem>
+        <NavItem><Link to="/location">Disasters</Link></NavItem>
+        <NavItem><Link to="/ImageAccordion">Alerts</Link></NavItem>
+        <NavItem><Link to="/supplylist">Supplies</Link></NavItem>
+        <NavItem><Link to="/about">About</Link></NavItem>
+        <NavItem><Link to="/login">Login</Link></NavItem>
+        <NavItem><Link to="/signup">Signup</Link></NavItem>
       </Navbar>
       )
   }

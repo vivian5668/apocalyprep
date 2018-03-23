@@ -69,37 +69,33 @@ app.get('/api/userlist', (req, res) => {
   });
 });
 
-//this route works, but it's not returning useful data
-// app.get('/api/supplylist', (req, res) => {
-//   console.log("You've hit the API to find all supplies");
-//   // Find all supplies
-//   Supply.find({}, function(err, supplylist) {
-//     if (err) {
-//       console.log("There was a db error");
-//       res.send(err);
-//     } else {
-//       console.log("Got supplylist from DB!")
-//       // This is the raw array of supply list objects
-//       res.send(supplylist);
-//     }
-//   });
-// });
-
 
 app.post('/addsupplies', (req, res) => {
   console.log("In the add supplies route")
-  console.log(req.body.user)
   User.find({email: req.body.user.email}, function(err, user) {
     User.findOneAndUpdate(
       { email: req.body.user.email},
       {$push: {supplies: req.body.item}},
       {upsert: true},
+     function(err, result) {
+      // console.log(result)
+    })
+  })
+});
+
+app.delete('/deletesupplies', (req, res) => {
+  console.log("In the delete supplies route")
+
+  User.find({email: req.body.user.email}, function(err, user) {
+    User.findOneAndUpdate(
+      { email: req.body.user.email},
+      {$pull: {supplies: req.body.item}},
+      {upsert: true},
       function(err, result) {
       console.log(result)
     })
   })
-})
-
+});
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {

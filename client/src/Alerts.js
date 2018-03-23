@@ -4,23 +4,13 @@ import Geocode from "react-geocode";
 import { setPoint } from './actions/index';
 import { setAlerts } from './actions/index';
 import  { Redirect } from 'react-router-dom';
+import LocationEnter from './LocationEnter';
+import {Row, Col, Button, Icon, Label, Input, Form} from 'react-materialize';
 import axios from 'axios';
 
-// componentDidUpdate() {
-//   const mapStateToProps = state => {
-//     console.log('alerts in alerts:', state.alerts)
-//     return {
-//       alerts: state.alerts
-//     }
-//   }
-// }
-// const mapStateToProps = state => {
-//   console.log('alerts in alerts:', state.alerts)
-//   return {
-//     alerts: state.alerts
-//   }
-// }
+
 function mapStateToProps(state) {
+  console.log('in alerts map', state)
   return {alerts: state.alerts}
 }
 
@@ -30,24 +20,44 @@ const Alerts = (props) => {
     console.log("in alerts:", props.alerts)
     if (props.alerts === null) {
       return(
-        <p>Alerts is equal </p>
+        <Row id="videoRow">
+          <Col s={8}>
+        		<LocationEnter />
+            <h6>Error, please re-enter city and state </h6>
+          </Col>
+      	</Row>
+
       )
     } else {
       return(
 
           <div>
             <h3>alerts</h3>
-            // Object.keys(obj).map(e => console.log(`key=${e}  value=${obj[e]}`));
-            //
-            // Object.keys(obj).forEach(function(key,index) {
-              // key: the name of the object key
-              // index: the ordinal position of the key within the object
-            });
-            <p>Alert: {props.alerts.features[0].properties.headline}</p>
-            <p>Alert: {props.alerts.features[1].properties.headline}</p>
-            <p>Alert: {props.alerts.features[2].properties.headline}</p>
-            <p>Alert: {props.alerts.features[3].properties.headline}</p>
-            <p>Alert: {props.alerts.features[4].properties.headline}</p>
+            {
+              props.alerts.map( (data, index) => {
+                if (data.properties.severity === 'Severe') {
+                  return (
+                    <div key={index}>
+                      {
+                        // <button
+                        //   data-alert={data.properties.headline}
+                        //   data-area={data.properties.areaDesc}
+                        //   data-instruct={data.properties.instruction}
+                        //   data-response={data.properties.response}
+                        // >
+                        //   {data.properties.headline}
+                        // </button>
+                      }
+                      <p>Alert: {data.properties.headline}</p>
+                      <p>Area: {data.properties.areaDesc}</p>
+                      <p>Description: {data.properties.description}</p>
+                      <p>Instruction: {data.properties.instruction}</p>
+                      <p>Response: {data.properties.response}</p>
+                    </div>
+                  )
+                }
+              })
+            }
           </div>
           // console.log({this.props.alerts})
         )
