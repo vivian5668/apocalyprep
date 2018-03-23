@@ -364,6 +364,54 @@ var things = [
     name: 'Prep your family: Turn on lights outside and in every room to make the house more visible in heavy smoke.',
     category: 'Wildfire',
   },
+  {
+    name: 'Prep your home: Make a list of items to bring inside in the event of a tsunami watch or warning being issued for your area.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Talk to your insurance agent. Homeowner policies do not cover flooding from a tsunami. Ask about the National Flood Insurance Program (NFIP) (www.fema.gov/nfip). NFIP covers tsunami damage, but your community must participate in the program.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Have an engineer check your home and advise about ways to make it more resistant to tsunami water. There may be ways to divert waves away from your property.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Know the warning signs. If an earthquake occurs on the coast, or if you are at the beach and see the ocean recede suddenly, a tsunami may occur.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Practice your evacuation routes. Familiarity may save your life. Be able to follow your escape route at night and during inclement weather.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Stay away from the beach. Never go down to the beach to watch a tsunami come in. If you can see the wave you are too close to escape it.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Protect windows with permanent storm shutters or invest in one-half inch marine plywood that is pre-cut to fit your doors and windows.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your home: Clear loose and clogged rain gutters and downspouts to prevent flooding and unnecessary pressure on the awnings.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your home: Remember that standard homeowners insurance doesn’t cover flooding but flood insurance does. Get information at www.FloodSmart.gov.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Do not walk, swim or drive through floodwater. Just six inches of fast-flowing water can knock you over and two feet will float a car.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Avoid contact with floodwater. It may be contaminated with sewage or contain dangerous insects or animals.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Stay out of areas subject to flooding. Underpasses, dips, low spots, canyons, washes, etc. can become filled with water.',
+    category: 'Hurricane',
+  },
 ];
 
 things.forEach(function(thing) {
