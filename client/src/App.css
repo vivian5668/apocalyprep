@@ -84,11 +84,10 @@ body {
   background-color: black;
   color: white;
   z-index: 100;
+  font-weight: 800;
 }
 
-
 .container {
-
   object-fit: contain;
   width: auto;
   height: auto;
@@ -104,6 +103,7 @@ body {
   top: 40%;
   z-index: 1000;
   font-size: 20px;
+  font-weight: 800;
   color: #000000;
 }
 
@@ -184,4 +184,20 @@ body {
   opacity: 0.5;
   background-color: grey;
 
+}
+
+.loginbutton {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  margin: 10px 0 10px 0;
+}
+
+#loginform {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+#signupform {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
 }

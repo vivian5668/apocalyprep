@@ -9,7 +9,7 @@ const About = props => {
     <div>
       <Row>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Emily.jpeg"></CardTitle>}>
+          <Card header={<CardTitle image="./img/Emily.jpeg"></CardTitle>}>
             <p className='abouttext'>Emily Hannan</p>
             <div className='iconlist'>
               <a href="https://github.com/hannan-emily">
@@ -22,7 +22,7 @@ const About = props => {
           </Card>
         </Col>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Chelsea.jpeg"></CardTitle>}>
+          <Card header={<CardTitle image="./img/Chelsea.jpeg"></CardTitle>}>
             <p className='abouttext'>Chelsea Zhu</p>
             <div className='iconlist'>
               <a href="https://github.com/vivian5668">
@@ -35,7 +35,7 @@ const About = props => {
           </Card>
         </Col>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Mike.jpg"></CardTitle>}>
+          <Card header={<CardTitle image="./img/Mike.jpg"></CardTitle>}>
             <p className='abouttext'>Michael Hammer</p>
             <div className='iconlist'>
               <a href="https://github.com/HamMike">
@@ -48,7 +48,7 @@ const About = props => {
           </Card>
         </Col>
         <Col s={3}>
-          <Card horizontal header={<CardTitle image="./img/Scott.jpg"></CardTitle>}>
+          <Card header={<CardTitle image="./img/Scott.jpg"></CardTitle>}>
             <p className='abouttext'>Scott Molsness</p>
             <div className='iconlist'>
               <a href="https://github.com/smolsn13">
