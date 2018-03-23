@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import {Row, Col, Button} from 'react-materialize';
 
 class Signup extends Component {
   constructor(props) {
@@ -52,12 +53,18 @@ class Signup extends Component {
     }
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} /><br />
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
-        <input type='submit' value='Sign Up!' />
-      </form>
+      <Row>
+        <Col s={2}></Col>
+        <Col className='center' s={8}>
+          <form id='signupform' onSubmit={this.handleSubmit}>
+            <input placeholder='Name:' type='text' value={this.state.name} onChange={this.handleNameChange} /><br />
+            <input placeholder='Email:' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
+            <input placeholder='Password:' type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+            <Button className='loginbutton white black-text' waves='light'>Sign Up</Button>
+          </form>
+        </Col>
+        <Col s={2}></Col>
+      </Row>
     )
   }
 }
