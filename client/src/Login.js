@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import {Row, Col} from 'react-materialize';
+import {Row, Col, Button} from 'react-materialize';
 import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
@@ -58,8 +58,9 @@ class Login extends Component {
           <form id='loginform' onSubmit={this.handleSubmit}>
             <input placeholder='Email' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handlePasswordChange}/><br />
-            <input type='submit' value='Log In!' />
-            <a href="/auth/google">Sign In with Google!</a>
+            <Button id='login' className='loginbutton white black-text' waves='light'>Log In</Button>
+            <p className='center'>OR</p>
+            <Button className='loginbutton white black-text' waves='light'><a href="/auth/google">Sign In with Google</a></Button>
           </form>
         </Col>
         <Col s={3}></Col>

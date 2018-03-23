@@ -84,12 +84,14 @@ class ConnectedLocationEnter extends Component {
       return <Redirect to='/ImageAccordion'  />
     }
     return (
-      <form className='locationform' onSubmit={this.handleSubmit} >
-        <label>
-          <Input  type="text" label="city, st" value={this.state.address} onChange={this.handleChange} />
-          <Input className='btn waves-effect grey darken-4 white-text' type="submit" value="submit" />
-        </label>
-      </form>
+      <Row>
+        <Col s={6}>
+          <form className='locationform' onSubmit={this.handleSubmit} >
+            <Input type="text" label="City, State" value={this.state.address} onChange={this.handleChange} />
+            <Input className='btn waves-effect grey darken-4 white-text' type="submit" value="submit" />
+          </form>
+        </Col>
+      </Row>
     );
   }
 }
