@@ -211,3 +211,10 @@ body {
   font-weight: 800;
 
 }
+
+.yourBrotherFromAnotherMother {
+  height: 100%;
+  overflow: scroll;
+  margin-top: 50px;
+  padding: 0 10px;
+}

@@ -20,9 +20,9 @@ const Alerts = (props) => {
     console.log("in alerts:", props.alerts)
     if (props.alerts === null) {
       return(
-        <div className="yourMom">
+        <div className="yourBrotherFromAnotherMother">
+          
       		<LocationEnter />
-          <h6>Error, please re-enter city and state </h6>
         </div>
 
       )
