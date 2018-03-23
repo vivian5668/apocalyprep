@@ -139,3 +139,29 @@ body {
   padding-right: 10%;
   margin: auto;
 }
+
+.alertcol {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.supplylistcol {
+  color: #000000;
+}
+
+.supplyheader {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.userlistcol {
+  color: #000000;
+}
+
+.supplylistitems {
+  color: #FFFFFF;
+}
+
+.allsupplyheader {
+  color: #000000;
+}

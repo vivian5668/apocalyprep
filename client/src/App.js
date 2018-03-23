@@ -9,7 +9,7 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
-import UserList from './Userlist';
+import UserList from './UserList';
 import EventEarthquake from './eventearthquake';
 import About from './About';
 
