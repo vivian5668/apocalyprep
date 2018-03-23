@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import axios from 'axios';
-import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
+import { Collapsible, CollapsibleItem, Input, Row, Col } from 'react-materialize'
 import { connect } from 'react-redux';
+import Alerts from './Alerts';
+import SupplyList from './SupplyList';
 
 const mapStateToProps = state => {
   return {
@@ -78,61 +79,61 @@ class ConnectedUserList extends Component  {
       }
     })
      var medicalList = medicalArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var foodwaterList = foodwaterArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var toolList = toolArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var techList = techArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
      {item.name}</li>)
 
      var docList = docArray.map((item,index) =>
-     <li key={index}>
+     <li key={index} className='supplylistitems'>
      <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange}  />
      {item.name}</li>)
 
 
       return (
-        <div>
-
-          <Collapsible accordion className="collapsible-accordion">
-            <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
-              <ul>{medicalList}
-
-              </ul>
-
-            </CollapsibleItem>
-
-            <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
-              <ul>{foodwaterList}</ul>
-            </CollapsibleItem>
-
-            <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
-              <ul>{toolList}</ul>
-            </CollapsibleItem>
-
-            <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
-              <ul>{techList}</ul>
-            </CollapsibleItem>
-
-            <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
-              <ul>{docList}</ul>
-            </CollapsibleItem>
-
-          </Collapsible>
-
-        </div>
+        <Row>
+          <Col s={4} className='alertcol'>
+            <Alerts />
+          </Col>
+          <Col s={4} className='supplylistcol'>
+            <h1 className='supplyheader'>All Supplies</h1>
+            <SupplyList />
+          </Col>
+          <Col s={4} className='userlistcol'>
+            <h1 className='supplyheader'>My Supplies</h1>
+            <Collapsible accordion className="collapsible-accordion">
+              <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
+                <ul>{medicalList}</ul>
+              </CollapsibleItem>
+              <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
+                <ul>{foodwaterList}</ul>
+              </CollapsibleItem>
+              <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
+                <ul>{toolList}</ul>
+              </CollapsibleItem>
+              <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
+                <ul>{techList}</ul>
+              </CollapsibleItem>
+              <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
+                <ul>{docList}</ul>
+              </CollapsibleItem>
+            </Collapsible>
+          </Col>
+        </Row>
       )
 
   }
