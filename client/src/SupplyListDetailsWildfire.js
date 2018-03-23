@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import SupplyList from './SupplyList';
 import {Row, Col, Button, Icon} from 'react-materialize';
+import EventWildfire from './eventwildfire';
 
-class SupplyListDetailsTornado extends Component {
+class SupplyListDetailsWildfire extends Component {
   constructor(props) {
     super()
     this.state = {
@@ -18,12 +19,12 @@ class SupplyListDetailsTornado extends Component {
           <Col s={9}>
               <Row>
                   <Col s={12}>
-                    <img src="./image/tornado.gif" alt="Tornado" />
+                    <img src="./image/wildfire.gif" alt="wildfire" />
                   </Col>
               </Row>
               <Row>
                   <Col s={12}>
-                      <h3> Hello Tornado </h3>
+                      <EventWildfire />
                   </Col>
               </Row>
           </Col>
@@ -32,4 +33,4 @@ class SupplyListDetailsTornado extends Component {
   }
 }
 
-export default SupplyListDetailsTornado;
+export default SupplyListDetailsWildfire;

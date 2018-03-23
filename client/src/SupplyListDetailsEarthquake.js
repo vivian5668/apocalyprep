@@ -19,7 +19,7 @@ class SupplyListDetailsEarthquake extends Component {
           <Col s={9}>
               <Row>
                   <Col s={12}>
-                    <img src="./image/tsunami.gif" alt="Tornado" />
+                    <img src="./image/earthquake.gif" alt="earthquake" />
                   </Col>
               </Row>
               <Row>
