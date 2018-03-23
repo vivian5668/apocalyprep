@@ -9,6 +9,7 @@ import UserProfile from './UserProfile';
 import axios from 'axios';
 import Nav from './Nav';
 import SupplyList from './SupplyList';
+import UserList from './Userlist';
 
 import SupplyListDetailsTornado from './SupplyListDetailsTornado';
 import SupplyListDetailsTsunami from './SupplyListDetailsTsunami';
@@ -16,6 +17,8 @@ import SupplyListDetailsWildfire from './SupplyListDetailsWildfire';
 import SupplyListDetailsEarthquake from './SupplyListDetailsEarthquake';
 import SupplyListDetailsHurricane from './SupplyListDetailsHurricane';
 import EventEarthquake from './eventearthquake';
+import EventTornado from './eventtornado';
+import EventWildfire from './eventwildfire';
 
 
 import { removeToken } from './actions/index';
@@ -152,6 +155,7 @@ class ConnectedApp extends Component {
             <Route path = '/tsunami' component={SupplyListDetailsTsunami} />
             <Route path = '/hurricane' component={SupplyListDetailsHurricane} />
             <Route path = '/eventearthquake' component={EventEarthquake} />
+            <Route path = '/eventwildfire' component={EventWildfire} />
 
           </div>
         </Router>

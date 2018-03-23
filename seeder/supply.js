@@ -293,11 +293,11 @@ var things = [
     category: 'Documents',
   },
   {
-    name: 'Prep your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks. ',
+    name: 'Prep your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks.',
     category: 'Earthquake',
   },
   {
-    name: 'Prep your home: Strap down televisions and other expensive or hazardous electrical components ',
+    name: 'Prep your home: Strap down televisions and other expensive or hazardous electrical components.',
     category: 'Earthquake',
   },
   {
@@ -305,7 +305,7 @@ var things = [
     category: 'Earthquake',
   },
   {
-    name: 'Prep your family: Each family member should know to Drop, Cover, and Hold On when they feel an earthquake. ',
+    name: 'Prep your family: Each family member should know to Drop, Cover, and Hold On when they feel an earthquake.',
     category: 'Earthquake',
   },
   {
@@ -317,8 +317,52 @@ var things = [
     category: 'Earthquake',
   },
   {
-    name: 'Credit card, debit card photocopies (front and back of cards)',
-    category: 'Earthquake',
+    name: 'Prep your home: Consider installing permanent shutters to cover windows. Shutters can be closed quickly and provide the safest protection for windows.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Make trees more wind resistant by removing diseased or damaged limbs, then strategically remove branches so that wind can blow through. Strong winds frequently break weak limbs and hurl them at great speed.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Strengthen garage doors. Garage doors are often damaged or destroyed by flying debris, allowing strong winds to enter. As winds apply pressure to the walls, the roof can be lifted off, and the rest of the house can easily follow.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Pick a safe spot to shelther during a tornado. Move to an underground shelter, basement or safe room. If none is available, a small, windowless interior room or hallway on the lowest level of a sturdy building is the safest alternative.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Know the warning signs of a tornado. Dark, often greenish sky, large hail, A large, dark, low-lying cloud (particularly if rotating or a loud roar, similar to a freight train.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Store a whistle or air horn in your home & know where it is. Use this to notify rescuers in case you are trapped by debris resulting from the tornado.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Keep woodpiles, propane tanks, sheds/outbuildings and combustibles at least 30 feet from all sides of your house.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your home: Reduce flammable materials on your roof. Regularly clean your gutters and roof of pine needles, branches and debris.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your home: Set aside household items that you can use as fire tools before emergency responders arrive: a rake, ax, hand saw or chain saw, bucket and shovel.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: If a wildfire is getting close, back your car into the garage or park it outside in the direction of your evacuation route.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: Do not put wet clothing or bandanas over your mouth or nose. Moist air causes more damage to airways than dry air at the same temperature.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: Turn on lights outside and in every room to make the house more visible in heavy smoke.',
+    category: 'Wildfire',
   },
 ];
 
