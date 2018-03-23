@@ -115,8 +115,9 @@ body {
   opacity: 0;
 }
 .flexbox-slider .flexbox-slide .text-block h3 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
+  text-decoration: underline;
 }
 .flexbox-slider:hover .flexbox-slide:hover {
   -ms-flex-negative: 0;
