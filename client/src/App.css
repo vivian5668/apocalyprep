@@ -10,18 +10,26 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+
+}
+
+body {
   overflow-y: hidden;
 }
 
-/* .style-checkbox[type="checkbox"] + label:active {
-    background: red;
-} */
+[type="checkbox"] {
+  color: white;
+}
+
+.filled-in {
+  color: white;
+}
 
 .filled-in-li {
   display: inline-block !important;
+  color: white;
+
 }
-
-
 
 video {
   height: 100vh;
@@ -110,9 +118,42 @@ body {
   color: #000000;
 }
 
+.location-image-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.location-image-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.4;
+  z-index: 2;
+}
+
 .location-image {
   max-height: 400px;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.location-title {
+  z-index: 10;
+  font-size: 90px;
+  color: white;
+  font-weight: 800;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 1%;
 }
 
 .image {
@@ -120,14 +161,9 @@ body {
   clip-path: inset(0 0 50% 0);
 }
 
-.location-title {
-  z-index: 10;
-  font-size: 80px;
-  color: white;
-  font-weight: 800;
-  text-align: left;
-  position: absolute;
-
+.event-text {
+  max-height: 250px;
+  overflow: scroll;
 }
 
 .collapsible-accordion {
@@ -195,6 +231,7 @@ body {
   background-color: transparent;
   color: white;
   border: 1px solid white;
+}
 
 .loginbutton {
   font-family: 'Raleway', sans-serif;

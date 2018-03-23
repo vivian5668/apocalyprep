@@ -98,6 +98,7 @@ class ConnectedSupplyList extends Component  {
   }
 
   render() {
+    
 
      // map through the 5 arrays i've built to create li elements
      var medicalList = this.state.medicalArray.map((item,index) =>
@@ -167,7 +168,7 @@ class ConnectedSupplyList extends Component  {
                 <ul>{docList}</ul>
                 </CollapsibleItem>
 
-              </Collapsible>        
+              </Collapsible>
             </div>
           </Col>
         </Row>
