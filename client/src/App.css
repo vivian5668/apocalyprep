@@ -6,7 +6,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background: url('image/space-dark_960.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 
@@ -182,10 +184,16 @@ body {
 }
 
 .yourDad {
-  opacity: 0.5;
-  background-color: grey;
+  /* opacity: 0.5; */
+  background-color: transparent;
 
 }
+
+
+.collapsible-header {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 
 .loginbutton {
   font-family: 'Raleway', sans-serif;
@@ -201,4 +209,5 @@ body {
 #signupform {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
+
 }
