@@ -136,7 +136,6 @@ class ConnectedApp extends Component {
   // or, if no logged in user exists send them to the signup/Login
   // can only accept user token OR user google NOT both
 
-
   render() {
     // console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
