@@ -19,12 +19,18 @@ class SupplyListDetailsTornado extends Component {
           <Col s={9}>
               <Row>
                   <Col s={12}>
-                    <img src="./image/tornado.gif" alt="Tornado" />
+                    <Row className="location-image-div">
+                      <h2 className="location-title">Tornado</h2>
+                      <div className="location-image-overlay"></div>
+                      <img className="location-image" src="./image/tornado.gif" alt="Tornado" />
+                    </Row>
                   </Col>
               </Row>
               <Row>
                   <Col s={12}>
+                    <Row className="event-text">
                       <EventTornado />
+                    </Row>
                   </Col>
               </Row>
           </Col>
