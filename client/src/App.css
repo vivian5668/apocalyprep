@@ -165,6 +165,7 @@ body {
 
 .allsupplyheader {
   color: #000000;
+}
 
 .yourMom {
   height: 100%;
@@ -175,7 +176,13 @@ body {
 }
 
 .yourDad {
-  opacity: 0.5;
-  background-color: grey;
+  /* opacity: 0.5; */
+  background-color: transparent;
 
+}
+
+.collapsible-header {
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid white;
 }
