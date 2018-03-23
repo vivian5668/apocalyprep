@@ -10,25 +10,25 @@ const mapStateToProps = state => {
   }
 }
 
-class ConnectedEventEarthquake extends Component  {
+class ConnectedEventTsunami extends Component  {
 
   constructor() {
     super();
     this.state = {
       allSupply: [],
-      earthquakeArray: [],
+      tsunamiArray: [],
     }
     this.filterSupply = this.filterSupply.bind(this)
   }
 
   filterSupply = () => {
 
-    // filter all supplies INTO 1 Category of earthquake
+    // filter all supplies INTO 1 Category of wildfire
     this.state.allSupply.forEach((item) => {
       switch(true) {
-        case item.category === "Earthquake":
+        case item.category === "Tsunami":
           this.setState({
-            earthquakeArray: [...this.state.earthquakeArray, item]
+            tsunamiArray: [...this.state.tsunamiArray, item]
           })
           break;
         default:
@@ -58,14 +58,14 @@ class ConnectedEventEarthquake extends Component  {
     }).then(() => {
 
       this.filterSupply()
-  
+
 
     })
   }
 
   render() {
 
-    var earthquakeEvent = this.state.earthquakeArray.map((item,index) =>
+    var tsunamiEvent = this.state.tsunamiArray.map((item,index) =>
        <li key={index}>
        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
        {item.name}</li>)
@@ -73,13 +73,13 @@ class ConnectedEventEarthquake extends Component  {
     return (
       <div>
           <ul>
-            {earthquakeEvent}
+            {tsunamiEvent}
           </ul>
         </div>
     )
   }
 }
 
-const eventearthquake = connect(mapStateToProps, null)(ConnectedEventEarthquake);
+const eventtsunami = connect(mapStateToProps, null)(ConnectedEventTsunami);
 
-export default eventearthquake;
+export default eventtsunami;

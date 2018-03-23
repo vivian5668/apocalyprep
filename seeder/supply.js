@@ -293,11 +293,11 @@ var things = [
     category: 'Documents',
   },
   {
-    name: 'Prep your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks. ',
+    name: 'Prep your home: Bolt and brace water heaters and gas appliances to wall studs. Have a professional install flexible fittings to avoid gas or water leaks.',
     category: 'Earthquake',
   },
   {
-    name: 'Prep your home: Strap down televisions and other expensive or hazardous electrical components ',
+    name: 'Prep your home: Strap down televisions and other expensive or hazardous electrical components.',
     category: 'Earthquake',
   },
   {
@@ -305,7 +305,7 @@ var things = [
     category: 'Earthquake',
   },
   {
-    name: 'Prep your family: Each family member should know to Drop, Cover, and Hold On when they feel an earthquake. ',
+    name: 'Prep your family: Each family member should know to Drop, Cover, and Hold On when they feel an earthquake.',
     category: 'Earthquake',
   },
   {
@@ -317,8 +317,100 @@ var things = [
     category: 'Earthquake',
   },
   {
-    name: 'Credit card, debit card photocopies (front and back of cards)',
-    category: 'Earthquake',
+    name: 'Prep your home: Consider installing permanent shutters to cover windows. Shutters can be closed quickly and provide the safest protection for windows.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Make trees more wind resistant by removing diseased or damaged limbs, then strategically remove branches so that wind can blow through. Strong winds frequently break weak limbs and hurl them at great speed.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Strengthen garage doors. Garage doors are often damaged or destroyed by flying debris, allowing strong winds to enter. As winds apply pressure to the walls, the roof can be lifted off, and the rest of the house can easily follow.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Pick a safe spot to shelther during a tornado. Move to an underground shelter, basement or safe room. If none is available, a small, windowless interior room or hallway on the lowest level of a sturdy building is the safest alternative.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Know the warning signs of a tornado. Dark, often greenish sky, large hail, A large, dark, low-lying cloud (particularly if rotating or a loud roar, similar to a freight train.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your family: Store a whistle or air horn in your home & know where it is. Use this to notify rescuers in case you are trapped by debris resulting from the tornado.',
+    category: 'Tornado',
+  },
+  {
+    name: 'Prep your home: Keep woodpiles, propane tanks, sheds/outbuildings and combustibles at least 30 feet from all sides of your house.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your home: Reduce flammable materials on your roof. Regularly clean your gutters and roof of pine needles, branches and debris.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your home: Set aside household items that you can use as fire tools before emergency responders arrive: a rake, ax, hand saw or chain saw, bucket and shovel.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: If a wildfire is getting close, back your car into the garage or park it outside in the direction of your evacuation route.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: Do not put wet clothing or bandanas over your mouth or nose. Moist air causes more damage to airways than dry air at the same temperature.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your family: Turn on lights outside and in every room to make the house more visible in heavy smoke.',
+    category: 'Wildfire',
+  },
+  {
+    name: 'Prep your home: Make a list of items to bring inside in the event of a tsunami watch or warning being issued for your area.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Talk to your insurance agent. Homeowner policies do not cover flooding from a tsunami. Ask about the National Flood Insurance Program (NFIP) (www.fema.gov/nfip). NFIP covers tsunami damage, but your community must participate in the program.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Have an engineer check your home and advise about ways to make it more resistant to tsunami water. There may be ways to divert waves away from your property.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Know the warning signs. If an earthquake occurs on the coast, or if you are at the beach and see the ocean recede suddenly, a tsunami may occur.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Practice your evacuation routes. Familiarity may save your life. Be able to follow your escape route at night and during inclement weather.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your family: Stay away from the beach. Never go down to the beach to watch a tsunami come in. If you can see the wave you are too close to escape it.',
+    category: 'Tsunami',
+  },
+  {
+    name: 'Prep your home: Protect windows with permanent storm shutters or invest in one-half inch marine plywood that is pre-cut to fit your doors and windows.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your home: Clear loose and clogged rain gutters and downspouts to prevent flooding and unnecessary pressure on the awnings.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your home: Remember that standard homeowners insurance doesn’t cover flooding but flood insurance does. Get information at www.FloodSmart.gov.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Do not walk, swim or drive through floodwater. Just six inches of fast-flowing water can knock you over and two feet will float a car.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Avoid contact with floodwater. It may be contaminated with sewage or contain dangerous insects or animals.',
+    category: 'Hurricane',
+  },
+  {
+    name: 'Prep your family: Stay out of areas subject to flooding. Underpasses, dips, low spots, canyons, washes, etc. can become filled with water.',
+    category: 'Hurricane',
   },
 ];
 
