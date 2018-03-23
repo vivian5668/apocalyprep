@@ -80,6 +80,6 @@ class ConnectedEventTornado extends Component  {
   }
 }
 
-const eventtornado = connect(mapStateToProps, null)(ConnectedEventTornado);
+const EventTornado = connect(mapStateToProps, null)(ConnectedEventTornado);
 
-export default eventtornado;
+export default EventTornado;

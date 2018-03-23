@@ -80,6 +80,6 @@ class ConnectedEventWildfire extends Component  {
   }
 }
 
-const eventwildfire = connect(mapStateToProps, null)(ConnectedEventWildfire);
+const EventWildfire = connect(mapStateToProps, null)(ConnectedEventWildfire);
 
-export default eventwildfire;
+export default EventWildfire;
