@@ -80,6 +80,6 @@ class ConnectedEventEarthquake extends Component  {
   }
 }
 
-const eventearthquake = connect(mapStateToProps, null)(ConnectedEventEarthquake);
+const EventEarthquake = connect(mapStateToProps, null)(ConnectedEventEarthquake);
 
-export default eventearthquake;
+export default EventEarthquake;
