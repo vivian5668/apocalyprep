@@ -5,7 +5,7 @@ import { setPoint } from './actions/index';
 import { setAlerts } from './actions/index';
 import  { Redirect } from 'react-router-dom';
 import LocationEnter from './LocationEnter';
-import {Row, Col, Button, Icon, Label, Input, Form} from 'react-materialize';
+import {Row, Col, Button, Icon, Label, Input, Form, Collapsible, CollapsibleItem} from 'react-materialize';
 import axios from 'axios';
 
 
@@ -47,12 +47,20 @@ const Alerts = (props) => {
                         // >
                         //   {data.properties.headline}
                         // </button>
+                      // <p>Alert: {data.properties.headline}</p>
+                      // <p>Area: {data.properties.areaDesc}</p>
+                      // <p>Description: {data.properties.description}</p>
+                      // <p>Instruction: {data.properties.instruction}</p>
+                      // <p>Response: {data.properties.response}</p>
                       }
-                      <p>Alert: {data.properties.headline}</p>
-                      <p>Area: {data.properties.areaDesc}</p>
-                      <p>Description: {data.properties.description}</p>
-                      <p>Instruction: {data.properties.instruction}</p>
-                      <p>Response: {data.properties.response}</p>
+                      <Collapsible className='black-text'>
+                        <CollapsibleItem header={data.properties.headline} icon='warning'>
+                          <p className='white-text'>Area:<br />{data.properties.areaDesc}</p>
+                          <p className='white-text'>Description:<br />{data.properties.description}</p>
+                          <p className='white-text'>Instruction:<br />{data.properties.instruction}</p>
+                          <p className='white-text'>Response:<br />{data.properties.response}</p>
+                        </CollapsibleItem>
+                      </Collapsible>
                     </div>
                   )
                 }
