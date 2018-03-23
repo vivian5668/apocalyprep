@@ -10,8 +10,7 @@ const Nav = props => {
     return (
       <Navbar brand='apocalyprep' right id='navbar'>
         <NavItem><Link to="/">Home</Link></NavItem>
-        <NavItem><Link to="/location">Disasters</Link></NavItem>
-        <NavItem><Link to="/ImageAccordion">Alerts</Link></NavItem>
+        <NavItem><Link to="/ImageAccordion">Events</Link></NavItem>
         <NavItem><Link to="/supplylist">Supplies</Link></NavItem>
         <NavItem><Link to="/about">About</Link></NavItem>
         <li>
@@ -30,7 +29,6 @@ const Nav = props => {
     return (
       <Navbar brand='apocalyprep' right id='navbar'>
         <NavItem><Link to="/">Home</Link></NavItem>
-        <NavItem><Link to="/location">Disasters</Link></NavItem>
         <NavItem><Link to="/ImageAccordion">Alerts</Link></NavItem>
         <NavItem><Link to="/supplylist">Supplies</Link></NavItem>
         <NavItem><Link to="/about">About</Link></NavItem>
