@@ -17,13 +17,30 @@ class ConnectedUserList extends Component  {
     this.state = {
       allSupply: []
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(e) {
+    console.log('in the handleDelete route');
+    var name = e.target.value.split('%')[0]
+    var category = e.target.value.split('%')[1]
+    let supply = {
+      name: name,
+      category: category
+    }
+    axios.delete('/deletesupplies', {
+      user: this.props.user,
+      item: supply
+    }).then(result => {
+      console.log(result.data)
+    })
   }
 
   componentDidUpdate() {
     console.log(this.state.allSupply)
     console.log(this.state.allSupply.length === 0)
     if (this.state.allSupply.length === 0) {
-      console.log("here be the user in compenetdidupdate", this.props.user.supplies);
+      console.log("here be the user in component did update", this.props.user.supplies);
       var newArr = this.props.user.supplies
       this.setState({
         allSupply: newArr
