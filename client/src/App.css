@@ -35,9 +35,9 @@ video {
 
 }
 
-#videoRow {
+/* #videoRow {
    text-align: center;
-}
+} */
 
 #background-video {
   object-fit: cover;
@@ -107,6 +107,7 @@ body {
   font-size: 20px;
   font-weight: 800;
   color: #000000;
+  text-align: center;
 }
 
 .location-image {
@@ -194,6 +195,7 @@ body {
   background-color: transparent;
   color: white;
   border: 1px solid white;
+}
 
 .loginbutton {
   font-family: 'Raleway', sans-serif;
