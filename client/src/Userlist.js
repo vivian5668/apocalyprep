@@ -50,6 +50,9 @@ class ConnectedUserList extends Component  {
   }
 
   render() {
+
+
+
     let medicalArray = []
     let foodwaterArray = []
     let toolArray = []
@@ -80,27 +83,27 @@ class ConnectedUserList extends Component  {
     })
      var medicalList = medicalArray.map((item,index) =>
      <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' className='style-checkbox' onChange={this.handleChange} />
      {item.name}</li>)
 
      var foodwaterList = foodwaterArray.map((item,index) =>
      <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in style-checkbox' onChange={this.handleChange} />
      {item.name}</li>)
 
      var toolList = toolArray.map((item,index) =>
      <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in style-checkbox' onChange={this.handleChange} />
      {item.name}</li>)
 
      var techList = techArray.map((item,index) =>
      <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in style-checkbox' onChange={this.handleChange} />
      {item.name}</li>)
 
      var docList = docArray.map((item,index) =>
      <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange}  />
+     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in style-checkbox' onChange={this.handleChange}  />
      {item.name}</li>)
 
 

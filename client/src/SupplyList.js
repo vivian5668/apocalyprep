@@ -27,7 +27,7 @@ class ConnectedSupplyList extends Component  {
   }
 
   handleChange(e) {
-    console.log(e.target.value);
+
     var name = e.target.value.split('%')[0]
     var category = e.target.value.split('%')[1]
     let supply = {
@@ -38,7 +38,7 @@ class ConnectedSupplyList extends Component  {
       user: this.props.user,
       item: supply
     }).then(result => {
-      console.log(result.data)
+
     })
   }
 
@@ -92,43 +92,65 @@ class ConnectedSupplyList extends Component  {
     }).then(() => {
 
       this.filterSupply()
-      console.log(this.state)
+
 
     })
   }
 
   render() {
+
      // map through the 5 arrays i've built to create li elements
      var medicalList = this.state.medicalArray.map((item,index) =>
-     <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
-     {item.name}</li>)
+     <div>
+       <li key={index} className='supplylistitems filled-in-li'>
+        <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
+
+       </li>
+       <br />
+      </div>)
 
      var foodwaterList = this.state.foodwaterArray.map((item,index) =>
-     <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
-     {item.name}</li>)
+     <div>
+       <li key={index}  className='supplylistitems filled-in-li'>
+       <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox'onChange={this.handleChange} />
+
+       </li>
+       <br />
+     </div>)
 
      var toolList = this.state.toolArray.map((item,index) =>
-     <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
-     {item.name}</li>)
+     <div>
+       <li key={index} className='supplylistitems filled-in-li'>
+       <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
+
+       </li>
+       <br />
+     </div>)
 
      var techList = this.state.techArray.map((item,index) =>
-     <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange} />
-     {item.name}</li>)
+     <div>
+       <li key={index}  className='supplylistitems filled-in-li'>
+       <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange} />
+
+       </li>
+       <br />
+     </div>)
 
      var docList = this.state.docArray.map((item,index) =>
-     <li key={index} className='supplylistitems'>
-     <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label='green' className='filled-in' onChange={this.handleChange}  />
-     {item.name}</li>)
+    <div>
+       <li key={index}  className='supplylistitems filled-in-li'>
+       <Input name='group1' type='checkbox' value={item.name + '%' + item.category} label={item.name} className='filled-in style-checkbox' onChange={this.handleChange}  />
+
+       </li>
+       <br />
+     </div>)
 
 
       return (
         <Row>
 
           <Col s={12}>
+          <div>
             <Collapsible accordion className="collapsible-accordion allsupplyheader">
 
               <CollapsibleItem header='Medical' icon='arrow_drop_down_circle'>
@@ -136,22 +158,23 @@ class ConnectedSupplyList extends Component  {
               </CollapsibleItem>
 
               <CollapsibleItem header='Food & Water' icon='arrow_drop_down_circle'>
-                <ul>{foodwaterList}</ul>
+              <ul>{foodwaterList}</ul>
               </CollapsibleItem>
 
               <CollapsibleItem header='Tools & Supplies' icon='arrow_drop_down_circle'>
-                <ul>{toolList}</ul>
+              <ul>{toolList}</ul>
               </CollapsibleItem>
 
               <CollapsibleItem header='Tech' icon='arrow_drop_down_circle'>
-                <ul>{techList}</ul>
+              <ul>{techList}</ul>
               </CollapsibleItem>
 
               <CollapsibleItem header='Documents' icon='arrow_drop_down_circle'>
-                <ul>{docList}</ul>
+              <ul>{docList}</ul>
               </CollapsibleItem>
 
             </Collapsible>
+          </div>
           </Col>
 
         </Row>
