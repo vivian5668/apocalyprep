@@ -176,14 +176,14 @@ body {
 
 
 .abouttext {
-  color: #000000 !important;
+  color: #FFFFFF !important;
   text-align: center;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
 }
 
 .fab {
-  color: #000000;
+  color: #FFFFFF;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
@@ -231,7 +231,6 @@ body {
 
 }
 
-
 .collapsible-header {
   background-color: transparent;
   color: white;
@@ -252,7 +251,17 @@ body {
 #signupform {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
+}
 
+.aboutheader {
+  font-weight: 300;
+  text-align: center;
+}
+
+.aboutsubheader {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .yourBrotherFromAnotherMother {
