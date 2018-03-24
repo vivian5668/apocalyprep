@@ -10,6 +10,7 @@ const Nav = props => {
     return (
       <Navbar brand='apocalyprep' right id='navbar'>
         <NavItem><Link to="/">Home</Link></NavItem>
+
         <NavItem><Link to="/ImageAccordion">Disasters</Link></NavItem>
 
         <NavItem><Dropdown className="dropdown-button" trigger={
@@ -22,6 +23,7 @@ const Nav = props => {
           <NavItem><Link to="/wildfire">Wildfire</Link></NavItem>
 
         </Dropdown></NavItem>
+
 
         <NavItem><Link to="/about">About</Link></NavItem>
 
@@ -53,6 +55,7 @@ const Nav = props => {
           <NavItem><Link to="/wildfire">Wildfire</Link></NavItem>
 
         </Dropdown></NavItem>
+
 
         <NavItem><Link to="/about">About</Link></NavItem>
         <NavItem><Link to="/login">Login</Link></NavItem>
