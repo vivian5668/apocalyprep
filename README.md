@@ -71,6 +71,7 @@
 - Sequelize
 - Node.js
 - Mongo
+- Mongoose
 
 ## Next Steps
 
