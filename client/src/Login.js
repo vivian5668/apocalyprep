@@ -43,7 +43,7 @@ class Login extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to='/location' />
+      return <Redirect to='/userlist' />
     }
 
     return (
