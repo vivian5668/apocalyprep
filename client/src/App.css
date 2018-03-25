@@ -10,17 +10,23 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+
 }
 
-/* .style-checkbox[type="checkbox"] + label:active {
-    background: red;
-} */
+label {
+  color: white;
+}
+
+body {
+  overflow-y: hidden;
+}
+
 
 .filled-in-li {
   display: inline-block !important;
+  color: white;
+
 }
-
-
 
 video {
   height: 100vh;
@@ -81,12 +87,32 @@ body {
   max-height: 100vw;
 }
 
+.brand-logo {
+ left: 2%;
+}
+
 #navbar {
   font-family: 'Raleway', sans-serif;
   background-color: black;
   color: white;
   z-index: 100;
+  padding: 0 0 0 15px;
   font-weight: 800;
+
+}
+
+.dropdown {
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  color: white;
+  z-index: 100;
+  padding: 0 0 0 15px;
+  font-weight: 800;
+}
+
+.dropdown-button {
+  background-color: black;
+  color: white;
 }
 
 .container {
@@ -111,9 +137,42 @@ body {
   /* width: 20%; */
 }
 
+.location-image-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.location-image-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.4;
+  z-index: 2;
+}
+
 .location-image {
   max-height: 400px;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.location-title {
+  z-index: 10;
+  font-size: 90px;
+  color: white;
+  font-weight: 800;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 1%;
 }
 
 .image {
@@ -121,14 +180,9 @@ body {
   clip-path: inset(0 0 50% 0);
 }
 
-.location-title {
-  z-index: 10;
-  font-size: 80px;
-  color: white;
-  font-weight: 800;
-  text-align: left;
-  position: absolute;
-
+.event-text {
+  max-height: 250px;
+  overflow: scroll;
 }
 
 .collapsible-accordion {
@@ -137,14 +191,14 @@ body {
 
 
 .abouttext {
-  color: #000000 !important;
+  color: #FFFFFF !important;
   text-align: center;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
 }
 
 .fab {
-  color: #000000;
+  color: #FFFFFF;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
@@ -191,7 +245,6 @@ body {
 
 }
 
-
 .collapsible-header {
   background-color: transparent;
   color: white;
@@ -212,7 +265,17 @@ body {
 #signupform {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
+}
 
+.aboutheader {
+  font-weight: 300;
+  text-align: center;
+}
+
+.aboutsubheader {
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .returnNullForm {

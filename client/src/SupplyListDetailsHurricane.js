@@ -19,12 +19,18 @@ class SupplyListDetailsHurricane extends Component {
           <Col s={9}>
               <Row>
                   <Col s={12}>
-                    <img src="./image/hurricane.gif" alt="hurricane" />
+                    <Row className="location-image-div">
+                      <h2 className="location-title">Hurricane</h2>
+                      <div className="location-image-overlay"></div>
+                      <img className="location-image" src="./image/hurricane.gif" alt="Hurricane" />
+                    </Row>
                   </Col>
               </Row>
               <Row>
                   <Col s={12}>
-                      <EventHurricane />
+                    <Row className="event-text">
+                      <EventHurricane/>
+                    </Row>
                   </Col>
               </Row>
           </Col>

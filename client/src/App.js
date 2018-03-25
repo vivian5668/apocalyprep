@@ -3,7 +3,7 @@ import './App.css';
 import Signup from './Signup';
 import Home from './Home';
 import ImageAccordion from './ImageAccordion';
-import Location from './Location';
+
 import Login from './Login';
 import UserProfile from './UserProfile';
 import axios from 'axios';
@@ -136,7 +136,6 @@ class ConnectedApp extends Component {
   // or, if no logged in user exists send them to the signup/Login
   // can only accept user token OR user google NOT both
 
-
   render() {
     // console.log(this.props)
     let theUser = this.props.user || this.props.googleUser
@@ -147,7 +146,7 @@ class ConnectedApp extends Component {
           <div>
             <Nav user={theUser} logout={this.props.logout}/>
             <Route exact path = '/' component={Home} />
-            <Route path = '/location' component={Location} />
+          
             <Route path = '/supplylist' component={SupplyList} />
             <Route path = '/userlist' component={UserList} />
             <Route path = '/user' component={() => <UserProfile user={theUser}/>} />

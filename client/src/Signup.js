@@ -53,18 +53,24 @@ class Signup extends Component {
     }
 
     return (
-      <Row>
-        <Col s={2}></Col>
-        <Col className='center' s={8}>
-          <form id='signupform' onSubmit={this.handleSubmit}>
-            <input placeholder='Name:' type='text' value={this.state.name} onChange={this.handleNameChange} /><br />
-            <input placeholder='Email:' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-            <input placeholder='Password:' type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
-            <Button className='loginbutton white black-text' waves='light'>Sign Up</Button>
-          </form>
-        </Col>
-        <Col s={2}></Col>
-      </Row>
+      <div className='signup'>
+        <Row></Row>
+        <Row></Row>
+        <Row></Row>
+        <Row></Row>
+        <Row>
+          <Col s={2}></Col>
+          <Col className='center' s={8}>
+            <form id='signupform' onSubmit={this.handleSubmit}>
+              <input placeholder='Name:' type='text' value={this.state.name} onChange={this.handleNameChange} /><br />
+              <input placeholder='Email:' type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
+              <input placeholder='Password:' type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+              <Button className='loginbutton white black-text' waves='light'>Sign Up</Button>
+            </form>
+          </Col>
+          <Col s={2}></Col>
+        </Row>
+      </div>
     )
   }
 }

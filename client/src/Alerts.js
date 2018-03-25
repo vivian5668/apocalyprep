@@ -43,7 +43,7 @@ const Alerts = (props) => {
             <h3>alerts</h3>
             {
               props.alerts.map( (data, index) => {
-                if (data.properties.severity === 'Severe') {
+                {/*if (data.properties.severity === 'Severe') { */}
                   return (
                     <div key={index}>
                       <Collapsible className='collapsDivs black-text'>
@@ -56,7 +56,7 @@ const Alerts = (props) => {
                       </Collapsible>
                     </div>
                   )
-                }
+              {/*}*/}
               })
             }
           </div>

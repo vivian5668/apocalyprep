@@ -19,12 +19,18 @@ class SupplyListDetailsWildfire extends Component {
           <Col s={9}>
               <Row>
                   <Col s={12}>
-                    <img src="./image/wildfire.gif" alt="wildfire" />
+                    <Row className="location-image-div">
+                      <h2 className="location-title">Wildfire</h2>
+                      <div className="location-image-overlay"></div>
+                      <img className="location-image" src="./image/wildfire.gif" alt="Wildfire" />
+                    </Row>
                   </Col>
               </Row>
               <Row>
                   <Col s={12}>
+                    <Row className="event-text">
                       <EventWildfire />
+                    </Row>
                   </Col>
               </Row>
           </Col>
