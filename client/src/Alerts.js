@@ -8,6 +8,7 @@ import LocationEnter from './LocationEnter';
 import {Row, Col, Button, Icon, Label, Input, Form, Collapsible, CollapsibleItem} from 'react-materialize';
 import axios from 'axios';
 
+// Geocode.setApiKey("GOOGLE_CLIENT_SECRET");
 
 function mapStateToProps(state) {
   console.log('in alerts map', state)
@@ -43,12 +44,12 @@ const Alerts = (props) => {
             <h3>alerts</h3>
             {
               props.alerts.map( (data, index) => {
-                {/*if (data.properties.severity === 'Severe') { */}
+                {/*if (data.properties.severity === 'Severe') {*/}
                   return (
                     <div key={index}>
                       <Collapsible className='collapsDivs black-text'>
                         <CollapsibleItem header={data.properties.headline} icon='warning'>
-                          <p className='white-text'>Area:<br />{data.properties.areaDesc}</p>
+                          <p className='white-text'>Severity:<br />{data.properties.severtity}</p>
                           <p className='white-text'>Description:<br />{data.properties.description}</p>
                           <p className='white-text'>Instruction:<br />{data.properties.instruction}</p>
                           <p className='white-text'>Response:<br />{data.properties.response}</p>
@@ -56,7 +57,7 @@ const Alerts = (props) => {
                       </Collapsible>
                     </div>
                   )
-              {/*}*/}
+                {/*}*/}
               })
             }
           </div>
