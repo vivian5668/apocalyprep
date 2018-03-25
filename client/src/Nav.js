@@ -14,7 +14,7 @@ const Nav = props => {
         <NavItem><Link to="/ImageAccordion">Disasters</Link></NavItem>
 
         <NavItem><Dropdown className="dropdown-button" trigger={
-          <Button>Single Disasters:</Button>
+          <Button>Single Disasters</Button>
           }>
           <NavItem><Link to="/tsunami">Tsunami</Link></NavItem>
           <NavItem><Link to="/hurricane">Hurricane</Link></NavItem>
@@ -24,7 +24,7 @@ const Nav = props => {
 
         </Dropdown></NavItem>
 
-
+        <NavItem><Link to="/userlist">Your Supplies</Link></NavItem>
         <NavItem><Link to="/about">About</Link></NavItem>
 
         <li>
