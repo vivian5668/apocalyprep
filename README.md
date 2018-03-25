@@ -66,17 +66,17 @@ The mobile version resembles the web version mostly with minor modification to f
 | GET     		| /auth/login	| show   |	Display form to enter login info	|
 | POST    		| /auth/login	| show   |	Authenticates user login info	|
 | GET     		| /auth/logout	| index  |	Logs user out of the application	|
-| GET     		| /gallery		| show   |Display the gallery page	|
-| GET     		| /instructions	| show   |	Display instructions for this app	|
-| GET     		| /profile		| redirect|	Display the user's projects if user is logged in	|
-| GET     		| /projects		| index  |	Show all user's projects	|
-| GET     		| /projects/new	| show   |	Display form to allow the user to create a new project	|
-| POST    		| /projects/new	| create |	Create a new project	|
-| GET     		| /projects/:id	| show   |	Display the project identified by project_id	|
-| GET     		| /projects/:id/edit| show  |	Display the form that allows the user to modify project information	|
-| PUT     		| /projects/:id	| update  |	Change project information	|
-| DELETE     	| /projects/:id/destroy	| delete  |	Delete a project	|
-
+| GET     		| /imageaccordion		| show   |Display the disasters page with alerts	|
+| GET     		| /tornado	| show   |	Display supply list & tornado event	|
+| GET     		| /earthquake	| show   |	Display supply list & earthquake event	|
+| GET     		| /tsunami	| show   |	Display supply list & tsunami event	|
+| GET     		| /tornado	| show   |	Display supply list & tornado event	|
+| GET     		| /wildfire	| show   |	Display supply list & wildfire event	|
+| GET     		| /about | show   |	Display about page with app overview & developer info	|
+| GET     		| /supplylist | show   |	Get supply list data from supplylist document/schema	|
+| GET     		| /userlist | show   |	Get user (supply) list data from userlist document/schema	|
+| POST    		| /addsupplies	| create |	Add an individual supply item to the user document/schema from the supplylist document/schema|
+| DELETE   		| /deletesupplies	| delete |	Delete an individual supply item from the user document/schema
 
 ## Models & Sample Data
 |id| name          | email          | password |
@@ -93,7 +93,6 @@ The mobile version resembles the web version mostly with minor modification to f
 - Redux
 - React
 - React-Materialize
-- Sequelize
 - Node.js
 - Mongo
 - Mongoose
