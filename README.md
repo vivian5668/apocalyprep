@@ -25,7 +25,7 @@
 <img src="" width="300">
 
 ### Mobile Version
->The mobile version resembles the web version mostly with minor modification to fit contents on smaller screens. The navigation bar collapses and slides out from the left of the screen once you click on the hamburger icon. 
+>The mobile version resembles the web version mostly with minor modification to fit contents on smaller screens. The navigation bar collapses and slides out from the left of the screen once you click on the hamburger icon.
 <img src="">
 
 ## Routes
@@ -52,7 +52,7 @@
 ## Models & Sample Data
 |id| name          | email          | password |
 |--|------------- |---------------| -------|
-| 2| Happy    		| happy@gmail.com			| $2a$10$Cnu/3QHw2WCaMo4xTfq5K.MTL9W2N4PDlA9t/0UOrj6I3A8c9GD7a  |	
+| 2| Happy    		| happy@gmail.com			| $2a$10$Cnu/3QHw2WCaMo4xTfq5K.MTL9W2N4PDlA9t/0UOrj6I3A8c9GD7a  |
 
 |id| project_name  | description   | cloudinary_url | ascii_url     | userId        |
 | -|----------- |---------------| ---------------| ------------- |---------------|
@@ -66,6 +66,8 @@
 - Redux
 - React
 - React-Materialize
+- React-Geocode
+- NOAA API
 - Sequelize
 - Node.js
 - Mongo
@@ -79,5 +81,3 @@
 ##Resources & Inspirations
 
 https://codepen.io/fox_hover/pen/RjxGNR
-
-

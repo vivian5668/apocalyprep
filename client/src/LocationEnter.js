@@ -80,6 +80,7 @@ class ConnectedLocationEnter extends Component {
   // }
 
   render() {
+    console.log("redirect", this.state.redirect)
     if (this.state.redirect) {
       return <Redirect to='/ImageAccordion'  />
     }
