@@ -13,8 +13,10 @@ var User = require('./models/user');
 
 // Mongoose stuff
 var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/mernJwtAuth');
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+
+mongoose.connect('mongodb://localhost/mernJwtAuth');
+// mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+
 
 var auth = require('./routes/auth');
 
@@ -101,9 +103,11 @@ app.delete('/deletesupplies', (req, res) => {
 });
 
 
-app.get('*', function(req, res, next) {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+
+// app.get('*', function(req, res, next) {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
