@@ -38,9 +38,9 @@ video {
 
 }
 
-/* #videoRow {
+#videoRow {
    text-align: center;
-} */
+}
 
 #background-video {
   object-fit: cover;
@@ -124,13 +124,14 @@ body {
 .locationform {
   font-family: 'Raleway', sans-serif;
   position: absolute;
-  left: 40%;
+  left: 45%;
   top: 40%;
   z-index: 1000;
   font-size: 20px;
   font-weight: 800;
   color: #000000;
   text-align: center;
+  /* width: 20%; */
 }
 
 .location-image-div {
@@ -227,7 +228,7 @@ body {
   color: #000000;
 }
 
-.yourMom {
+.collapsBox {
   height: 100%;
   overflow: scroll;
   margin-top: 50px;
@@ -235,8 +236,7 @@ body {
   color: red;
 }
 
-.yourDad {
-
+.collapsDivs {
   /* opacity: 0.5; */
   background-color: transparent;
 
@@ -275,9 +275,11 @@ body {
   margin-bottom: 30px;
 }
 
-.yourBrotherFromAnotherMother {
+.returnNullForm {
+  width: 100%;
   height: 100%;
   overflow: scroll;
   margin-top: 50px;
   padding: 0 10px;
+
 }

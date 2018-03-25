@@ -13,7 +13,10 @@ var User = require('./models/user');
 
 // Mongoose stuff
 var mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/mernJwtAuth');
+// mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+
 
 var auth = require('./routes/auth');
 
@@ -22,7 +25,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client', 'build', 'public')));
+// app.use(express.static(path.join(__dirname, 'client', 'build', 'public')));
+app.use(express.static(path.resolve(__dirname, 'client', 'build')));
+
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -96,6 +101,13 @@ app.post('/addsupplies', (req, res) => {
 //     })
 //   })
 // });
+
+
+
+// app.get('*', function(req, res, next) {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
