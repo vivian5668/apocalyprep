@@ -24,7 +24,7 @@ const Nav = props => {
 
         </Dropdown></NavItem>
 
-        <NavItem><Link to="/about">Your Supplies</Link></NavItem>
+        <NavItem><Link to="/userlist">Your Supplies</Link></NavItem>
         <NavItem><Link to="/about">About</Link></NavItem>
 
         <li>
