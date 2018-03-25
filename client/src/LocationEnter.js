@@ -48,31 +48,31 @@ class ConnectedLocationEnter extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log("address: " + this.state.address)
-    Geocode.fromAddress(this.state.address).then(
-       response => {
-         const { lat,lng } = response.results[0].geometry.location;
-         var point = lat + ',' + lng
-         this.props.setPoint(point)
-         // this.setState({
-         //   point: point
-         // })
-         // console.log(response.results[0].geometry.location)
-         // console.log(lat,lng);
-         console.log('AFTER SET POINT', this.props.point)
-       }
-     ).then(() => {
-       axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
-         this.props.setAlerts(result.data.features)
-         console.log("AFTER SET RESULT", result)
+    if (this.state.address) {
+      Geocode.fromAddress(this.state.address).then(
+         response => {
+           const { lat,lng } = response.results[0].geometry.location;
+           var point = lat + ',' + lng
+           this.props.setPoint(point)
+           // this.setState({
+           //   point: point
+           // })
+           // console.log(response.results[0].geometry.location)
+           // console.log(lat,lng);
+           console.log('AFTER SET POINT', this.props.point)
+         }
+       ).then(() => {
+         axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
+           this.props.setAlerts(result.data.features)
+           console.log("AFTER SET RESULT", result)
+         })
        })
-     })
-     .then(() => {
-       this.setState({
-         redirect: true
+       .then(() => {
+         this.setState({
+           redirect: true
+         })
        })
-     })
-
-
+     }
   }
 
   // getstate = () => {
@@ -84,12 +84,13 @@ class ConnectedLocationEnter extends Component {
       return <Redirect to='/ImageAccordion'  />
     }
     return (
-        <form className='locationform col s12' onSubmit={this.handleSubmit} >
+        <form className='locationform col m12' onSubmit={this.handleSubmit} >
           <label>
-            <Input  type="text" label="please enter city, state" value={this.state.address} onChange={this.handleChange} />
+            <Input  type="text" label="enter city, state" value={this.state.address} onChange={this.handleChange} />
             <Input className='btn waves-effect grey darken-4 white-text' type="submit" value="submit" />
           </label>
         </form>
+
     );
   }
 }
