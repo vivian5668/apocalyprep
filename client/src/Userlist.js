@@ -60,7 +60,7 @@ class ConnectedUserList extends Component  {
     let docArray = []
     // filter all supplies into categories & new arrays using swich case
     this.state.allSupply.forEach((item) => {
-      console.log('in all supply filter function', this.state.allSupply);
+      // console.log('in all supply filter function', this.state.allSupply);
       switch(true) {
         case item.category === "Medical":
           medicalArray.push(item)
