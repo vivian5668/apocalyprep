@@ -83,19 +83,19 @@ app.post('/addsupplies', (req, res) => {
   })
 });
 
-app.delete('/deletesupplies', (req, res) => {
-  console.log("In the delete supplies route")
-
-  User.find({email: req.body.user.email}, function(err, user) {
-    User.findOneAndUpdate(
-      { email: req.body.user.email},
-      {$pull: {supplies: req.body.item}},
-      {upsert: true},
-      function(err, result) {
-      console.log(result)
-    })
-  })
-});
+// app.delete('/deletesupplies', (req, res) => {
+//   console.log("In the delete supplies route")
+//
+//   User.findOne({email: req.body.user.email}, function(err, user) {
+//     User.findOneAndRemove(toDelete, function(err, item) {
+//       {$pull: {supplies: req.body.item}},
+//       {multi: false}
+//       function(err, result) {
+//       console.log(result)
+//     }
+//     })
+//   })
+// });
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
