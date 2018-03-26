@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Geocode from "react-geocode";
+import Geocode from "./react-geocode";
 import { setPoint } from './actions/index';
 import { setAlerts } from './actions/index';
 import  { Redirect } from 'react-router-dom';
