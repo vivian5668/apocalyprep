@@ -14,7 +14,7 @@ const Nav = props => {
         <NavItem><Link to="/ImageAccordion">Disasters</Link></NavItem>
 
         <NavItem><Dropdown className="dropdown-button" trigger={
-          <Button>Single Disasters</Button>
+          <li>Disaster Details</li>
           }>
           <NavItem><Link to="/tsunami">Tsunami</Link></NavItem>
           <NavItem><Link to="/hurricane">Hurricane</Link></NavItem>
@@ -24,19 +24,18 @@ const Nav = props => {
 
         </Dropdown></NavItem>
 
-        <NavItem><Link to="/userlist">Your Supplies</Link></NavItem>
+        <NavItem><Link to="/userlist">My Supplies</Link></NavItem>
         <NavItem><Link to="/about">About</Link></NavItem>
 
-        <li>
-          <Dropdown trigger={<a><Icon>person</Icon></a>}>
+        <NavItem>
+          <Dropdown className='dropdown-button' trigger={<li><Icon>person</Icon></li>}>
             <NavItem>Hello, {props.user.name}!</NavItem>
-            <NavItem><Link to="/">User</Link></NavItem>
             <NavItem divider />
             <li>
               <a href='/' onClick={props.logout}>Log Out</a>
             </li>
           </Dropdown>
-        </li>
+        </NavItem>
       </Navbar>
     )
   } else if (props.user === null){
@@ -46,7 +45,7 @@ const Nav = props => {
         <NavItem><Link to="/ImageAccordion">Disasters</Link></NavItem>
 
         <NavItem><Dropdown className="dropdown-button" trigger={
-          <Button>Single Disasters:</Button>
+          <li>Disaster Details</li>
           }>
           <NavItem><Link to="/tsunami">Tsunami</Link></NavItem>
           <NavItem><Link to="/hurricane">Hurricane</Link></NavItem>
