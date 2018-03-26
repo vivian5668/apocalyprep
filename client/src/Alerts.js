@@ -8,7 +8,6 @@ import LocationEnter from './LocationEnter';
 import {Row, Col, Button, Icon, Label, Input, Form, Collapsible, CollapsibleItem} from 'react-materialize';
 import axios from 'axios';
 
-// Geocode.setApiKey("GOOGLE_CLIENT_SECRET");
 
 function mapStateToProps(state) {
   console.log('in alerts map', state)
@@ -18,21 +17,15 @@ function mapStateToProps(state) {
 
 // {this.props.alerts.data.data.features[0].properties.headline}
 const Alerts = (props) => {
-    console.log("in alerts:", props.alerts)
-
-    if (props.alerts === "undefined") {
-      return (
-        <div className="yourBrotherFromAnotherMother">
-          <h3>Nothing Entered, re-enter</h3>
-      		<LocationEnter />
-        </div>
-      )
-    }
+    // console.log("in alerts:", props.alerts)
 
 
-    if (props.alerts === null || props.alerts === undefined) {
+    if (props.alerts === null || props.alerts.length === 0) {
       return(
         <div className="returnNullForm">
+          <h5>No Warnings</h5><br />
+          <h6>Search again</h6>
+
       		<LocationEnter />
         </div>
 

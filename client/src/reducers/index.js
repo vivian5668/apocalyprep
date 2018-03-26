@@ -44,11 +44,11 @@ const rootReducer = (state = initialState, action) => {
       return Object.assign({}, state, {googleUser: null})
     case SET_POINT:
       console.log('SET_POINT');
-      console.log("reducers", action.payload)
+      // console.log("reducers", action.payload)
       return Object.assign({}, state, {point: action.payload})
     case SET_ALERTS:
-      console.log('SET_ALERTS');
-      console.log("reducers", action.payload)
+      // console.log('SET_ALERTS');
+      // console.log("reducers", action.payload)
       return Object.assign({}, state, {alerts: action.payload})
 
     default:

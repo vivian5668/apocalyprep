@@ -82,9 +82,6 @@ The mobile version resembles the web version mostly with minor modification to f
 |--|------------- |---------------| -------|
 | 2| Happy    		| happy@gmail.com			| $2a$10$Cnu/3QHw2WCaMo4xTfq5K.MTL9W2N4PDlA9t/0UOrj6I3A8c9GD7a  |
 
-|id| project_name  | description   | cloudinary_url | ascii_url     | userId        |
-| -|----------- |---------------| ---------------| ------------- |---------------|
-| 1| Sydney Colors | School Project| http://res.cloudinary.com/dxc.. |<span>djiendjncjd... | 2 |
 
 ## Technology / Library Used
 - Javascript
@@ -92,6 +89,10 @@ The mobile version resembles the web version mostly with minor modification to f
 - Redux
 - React
 - React-Materialize
+
+- React-Geocode
+- NOAA API
+- Sequelize
 - Node.js
 - Mongo
 - Mongoose
