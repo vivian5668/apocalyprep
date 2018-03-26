@@ -13,8 +13,10 @@ var User = require('./models/user');
 
 // Mongoose stuff
 var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/mernJwtAuth');
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+
+mongoose.connect('mongodb://localhost/mernJwtAuth');
+// mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+
 
 var auth = require('./routes/auth');
 
@@ -86,24 +88,26 @@ app.post('/addsupplies', (req, res) => {
   })
 });
 
-app.delete('/deletesupplies', (req, res) => {
-  console.log("In the delete supplies route")
+// app.delete('/deletesupplies', (req, res) => {
+//   console.log("In the delete supplies route")
+//
+//   User.findOne({email: req.body.user.email}, function(err, user) {
+//     User.findOneAndRemove(toDelete, function(err, item) {
+//       {$pull: {supplies: req.body.item}},
+//       {multi: false}
+//       function(err, result) {
+//       console.log(result)
+//     }
+//     })
+//   })
+// });
 
-  User.find({email: req.body.user.email}, function(err, user) {
-    User.findOneAndUpdate(
-      { email: req.body.user.email},
-      {$pull: {supplies: req.body.item}},
-      {upsert: true},
-      function(err, result) {
-      console.log(result)
-    })
-  })
-});
 
 
-app.get('*', function(req, res, next) {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('*', function(req, res, next) {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
