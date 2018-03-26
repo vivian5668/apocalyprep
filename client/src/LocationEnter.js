@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => { //dispatch here is a function
 
 
 const mapStateToProps = state => {
-  console.log('map state 2 prop', state)
+  // console.log('map state 2 prop', state)
   return {
     point: state.point,
     alerts: state.alerts
@@ -47,7 +47,7 @@ class ConnectedLocationEnter extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    console.log("address: " + this.state.address)
+    // console.log("address: " + this.state.address)
     if (this.state.address) {
       Geocode.fromAddress(this.state.address).then(
          response => {
@@ -59,12 +59,12 @@ class ConnectedLocationEnter extends Component {
            // })
            // console.log(response.results[0].geometry.location)
            // console.log(lat,lng);
-           console.log('AFTER SET POINT', this.props.point)
+           // console.log('AFTER SET POINT', this.props.point)
          }
        ).then(() => {
          axios.get('https://api.weather.gov/alerts?point=' + this.props.point + '&status=actual').then(result => {
            this.props.setAlerts(result.data.features)
-           console.log("AFTER SET RESULT", result)
+           // console.log("AFTER SET RESULT", result)
          })
        })
        .then(() => {
@@ -80,7 +80,7 @@ class ConnectedLocationEnter extends Component {
   // }
 
   render() {
-    console.log("redirect", this.state.redirect)
+    // console.log("redirect", this.state.redirect)
     if (this.state.redirect) {
       return <Redirect to='/ImageAccordion'  />
     }

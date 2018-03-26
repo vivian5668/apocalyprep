@@ -17,7 +17,7 @@ function mapStateToProps(state) {
 
 // {this.props.alerts.data.data.features[0].properties.headline}
 const Alerts = (props) => {
-    console.log("in alerts:", props.alerts)
+    // console.log("in alerts:", props.alerts)
 
 
     if (props.alerts === null || props.alerts.length === 0) {
