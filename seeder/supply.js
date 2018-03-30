@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mernJwtAuth');
 var Supply  = require('../models/supply');
 
-
+module.exports = function() {
 var things = [
   {
     name: '25 adhesive bandages (assorted sizes)',
@@ -414,7 +414,7 @@ var things = [
   },
 ];
 
-things.forEach(function(thing) {
+  things.forEach(function(thing) {
   console.log("Trying to add a thing...")
   console.log(thing.name)
   console.log(thing.category)
@@ -434,5 +434,6 @@ things.forEach(function(thing) {
     }
   )
 });
+}
 
 // process.exit();

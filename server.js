@@ -11,6 +11,8 @@ var passport = require('./config/passportConfig');
 var Supply = require('./models/supply');
 var User = require('./models/user');
 
+var seeed = require('./seeder/supply')
+
 // Mongoose stuff
 var mongoose = require('mongoose');
 
@@ -102,7 +104,10 @@ app.post('/addsupplies', (req, res) => {
 //   })
 // });
 
-
+app.get('/seeed', function(req, res) {
+  seeed();
+  res.send("yo seeder");
+})
 
 app.get('*', function(req, res, next) {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
