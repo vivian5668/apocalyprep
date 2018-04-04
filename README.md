@@ -1,7 +1,7 @@
 # Apocalyprep
 
 ## Open the Live App Here:
- Try it [here](https://.com/).
+ Try it [here](http://apocalyprep.herokuapp.com/).
 
 ## Things Happen. Be Prepared.
 Disasters sound scary. Preparing for one doesn’t have to be! View comprehensive, real time severe weather alerts for your city. Current data from the National Weather Service includes warnings, advisements and possible evacuation info if necessary.
@@ -82,24 +82,20 @@ The mobile version resembles the web version mostly with minor modification to f
 |--|------------- |---------------| -------|
 | 2| Happy    		| happy@gmail.com			| $2a$10$Cnu/3QHw2WCaMo4xTfq5K.MTL9W2N4PDlA9t/0UOrj6I3A8c9GD7a  |
 
-
 ## Technology / Library Used
+- Express
 - Javascript
 - jQuery
-- Redux
-- React
-- React-Materialize
-
-- React-Geocode
-- NOAA API
-- Sequelize
-- Node.js
 - Mongo
 - Mongoose
+- NOAA API
+- React
+- React-Materialize
+- React-Geocode
+- Redux
 
 ## Next Steps
 - Add in ability for users to print or export list as a .pdf
-- Add filter for users to select not just severe weather alerts
 
 ## Resources & Inspirations
 - https://codepen.io/fox_hover/pen/RjxGNR
