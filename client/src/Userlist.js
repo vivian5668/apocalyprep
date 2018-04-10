@@ -29,9 +29,9 @@ class ConnectedUserList extends Component  {
       name: name,
       category: category
     }
-    axios.delete('/deletesupplies', {
-      user: this.props.user,
-      item: supply
+    axios.post('/deletesupplies', {
+        user: this.props.user,
+        item: supply
     }).then(result => {
       console.log(result.data)
     })
