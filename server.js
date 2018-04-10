@@ -91,19 +91,24 @@ app.post('/addsupplies', (req, res) => {
   })
 });
 
-// app.delete('/deletesupplies', (req, res) => {
-//   console.log("In the delete supplies route")
-//
-//   User.findOne({email: req.body.user.email}, function(err, user) {
-//     User.findOneAndRemove(toDelete, function(err, item) {
-//       {$pull: {supplies: req.body.item}},
-//       {multi: false}
-//       function(err, result) {
-//       console.log(result)
-//     }
-//     })
-//   })
-// });
+app.post('/deletesupplies', (req, res) => {
+  console.log("In the delete supplies route")
+
+  User.findOne({email: req.body.user.email}, function(err, user) {
+    console.log("we found a user to delete supplies from");
+    console.log("user: ", user);
+    console.log("item name: ", req.body.item.name);
+    user.supplies.forEach(function(item) {
+      if (item.name === req.body.item.name) {
+        user.supplies.id(item._id).remove();
+      }
+    });
+    console.log("why is findOne running twice here?");
+    user.save(function(err) {
+      console.log(err)
+    })
+  })
+});
 
 //this next line populates the database
 
